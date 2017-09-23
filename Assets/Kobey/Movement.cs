@@ -8,12 +8,13 @@ public class Movement : MonoBehaviour {
     Rigidbody rb;
     public float speed;
     public string PlayerNumber;
-    
+
+    Animator anim;
     // Use this for initialization
     void Start ()
     {
         rb = GetComponent<Rigidbody>();
-        
+        anim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -24,6 +25,12 @@ public class Movement : MonoBehaviour {
         float vert = Input.GetAxis("LeftStickYAxis" + PlayerNumber);
         float Lookx = Input.GetAxis("RightStickXAxis" + PlayerNumber);
         float lookz = Input.GetAxis("RightStickYAxis" + PlayerNumber);
+
+       
+            anim.SetFloat("MoveMent", horz + vert);
+        
+       
+
 
         rb.velocity = new Vector3(-horz * speed, 0, vert * speed);
 
