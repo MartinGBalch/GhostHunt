@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 8243999}
   - component: {fileID: 8243998}
   - component: {fileID: 8243997}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: InteriorWall
   m_TagString: GhostWall
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ Transform:
   m_LocalScale: {x: 1, y: 2.86, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &390506803
 GameObject:
@@ -288,7 +288,8 @@ GameObject:
   - component: {fileID: 431056880}
   - component: {fileID: 431056879}
   - component: {fileID: 431056878}
-  m_Layer: 0
+  - component: {fileID: 431056885}
+  m_Layer: 8
   m_Name: TempGhost (7)
   m_TagString: Ghost
   m_Icon: {fileID: 0}
@@ -342,11 +343,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44e511fc39ec93d43b699753e626f71a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  players: []
   minX: -40
   maxX: 40
   minZ: -40
   maxZ: 40
   timer: 6
+  playerDetected: 0
 --- !u!23 &431056881
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -410,8 +413,28 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &431056885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 431056877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a28d6ae7725c0f64d8ecd8c2232e77cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewRadius: 10
+  viewAngle: 60
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 256
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 512
+  visibleTargets: []
 --- !u!1 &478967472
 GameObject:
   m_ObjectHideFlags: 0
@@ -423,7 +446,7 @@ GameObject:
   - component: {fileID: 478967475}
   - component: {fileID: 478967474}
   - component: {fileID: 478967473}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ExteriorWall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -492,7 +515,7 @@ Transform:
   m_LocalScale: {x: 1, y: 2.86, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &669703196
 GameObject:
@@ -508,7 +531,8 @@ GameObject:
   - component: {fileID: 669703199}
   - component: {fileID: 669703198}
   - component: {fileID: 669703197}
-  m_Layer: 0
+  - component: {fileID: 669703204}
+  m_Layer: 8
   m_Name: TempGhost (5)
   m_TagString: Ghost
   m_Icon: {fileID: 0}
@@ -562,11 +586,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44e511fc39ec93d43b699753e626f71a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  players: []
   minX: -40
   maxX: 40
   minZ: -40
   maxZ: 40
   timer: 6
+  playerDetected: 0
 --- !u!23 &669703200
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -630,8 +656,28 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &669703204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 669703196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a28d6ae7725c0f64d8ecd8c2232e77cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewRadius: 10
+  viewAngle: 60
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 256
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 512
+  visibleTargets: []
 --- !u!1 &902930235
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,7 +689,7 @@ GameObject:
   - component: {fileID: 902930238}
   - component: {fileID: 902930237}
   - component: {fileID: 902930236}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ExteriorWall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -712,7 +758,7 @@ Transform:
   m_LocalScale: {x: 1, y: 2.86, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &913527139
 GameObject:
@@ -793,6 +839,88 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1103009972
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1103009976}
+  - component: {fileID: 1103009975}
+  - component: {fileID: 1103009974}
+  - component: {fileID: 1103009973}
+  m_Layer: 8
+  m_Name: Cube
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &1103009973
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1103009972}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!65 &1103009974
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1103009972}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1103009975
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1103009972}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1103009976
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1103009972}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.99, y: 1.11, z: -2.61}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1226394912
 GameObject:
   m_ObjectHideFlags: 0
@@ -807,7 +935,8 @@ GameObject:
   - component: {fileID: 1226394915}
   - component: {fileID: 1226394914}
   - component: {fileID: 1226394913}
-  m_Layer: 0
+  - component: {fileID: 1226394920}
+  m_Layer: 8
   m_Name: TempGhost (1)
   m_TagString: Ghost
   m_Icon: {fileID: 0}
@@ -861,11 +990,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44e511fc39ec93d43b699753e626f71a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  players: []
   minX: -40
   maxX: 40
   minZ: -40
   maxZ: 40
   timer: 6
+  playerDetected: 0
 --- !u!23 &1226394916
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -931,6 +1062,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1226394920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1226394912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a28d6ae7725c0f64d8ecd8c2232e77cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewRadius: 10
+  viewAngle: 60
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 256
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 512
+  visibleTargets: []
 --- !u!1 &1232796805
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,7 +1096,8 @@ GameObject:
   - component: {fileID: 1232796808}
   - component: {fileID: 1232796807}
   - component: {fileID: 1232796806}
-  m_Layer: 0
+  - component: {fileID: 1232796813}
+  m_Layer: 8
   m_Name: TempGhost (2)
   m_TagString: Ghost
   m_Icon: {fileID: 0}
@@ -999,11 +1151,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44e511fc39ec93d43b699753e626f71a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  players: []
   minX: -40
   maxX: 40
   minZ: -40
   maxZ: 40
   timer: 6
+  playerDetected: 0
 --- !u!23 &1232796809
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1067,8 +1221,28 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1232796813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1232796805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a28d6ae7725c0f64d8ecd8c2232e77cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewRadius: 10
+  viewAngle: 60
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 256
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 512
+  visibleTargets: []
 --- !u!1 &1280995990
 GameObject:
   m_ObjectHideFlags: 0
@@ -1083,7 +1257,8 @@ GameObject:
   - component: {fileID: 1280995993}
   - component: {fileID: 1280995992}
   - component: {fileID: 1280995991}
-  m_Layer: 0
+  - component: {fileID: 1280995998}
+  m_Layer: 8
   m_Name: TempGhost
   m_TagString: Ghost
   m_Icon: {fileID: 0}
@@ -1137,11 +1312,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44e511fc39ec93d43b699753e626f71a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  players: []
   minX: -40
   maxX: 40
   minZ: -40
   maxZ: 40
   timer: 6
+  playerDetected: 0
 --- !u!23 &1280995994
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1200,13 +1377,33 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1280995990}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: 0.029765915, z: -0, w: 0.9995569}
   m_LocalPosition: {x: 25.79, y: 1.38, z: -3.995419}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 3.4110003, z: 0}
+--- !u!114 &1280995998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1280995990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a28d6ae7725c0f64d8ecd8c2232e77cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewRadius: 10
+  viewAngle: 60
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 256
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 512
+  visibleTargets: []
 --- !u!1 &1392209598
 GameObject:
   m_ObjectHideFlags: 0
@@ -1218,7 +1415,7 @@ GameObject:
   - component: {fileID: 1392209601}
   - component: {fileID: 1392209600}
   - component: {fileID: 1392209599}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ExteriorWall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1287,7 +1484,7 @@ Transform:
   m_LocalScale: {x: 1, y: 2.86, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1508558118
 GameObject:
@@ -1392,7 +1589,8 @@ GameObject:
   - component: {fileID: 1704328953}
   - component: {fileID: 1704328952}
   - component: {fileID: 1704328951}
-  m_Layer: 0
+  - component: {fileID: 1704328958}
+  m_Layer: 8
   m_Name: TempGhost (3)
   m_TagString: Ghost
   m_Icon: {fileID: 0}
@@ -1446,11 +1644,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44e511fc39ec93d43b699753e626f71a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  players: []
   minX: -40
   maxX: 40
   minZ: -40
   maxZ: 40
   timer: 6
+  playerDetected: 0
 --- !u!23 &1704328954
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1514,8 +1714,28 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1704328958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1704328950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a28d6ae7725c0f64d8ecd8c2232e77cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewRadius: 10
+  viewAngle: 60
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 256
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 512
+  visibleTargets: []
 --- !u!1 &1728680603
 GameObject:
   m_ObjectHideFlags: 0
@@ -1527,7 +1747,7 @@ GameObject:
   - component: {fileID: 1728680606}
   - component: {fileID: 1728680605}
   - component: {fileID: 1728680604}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ExteriorWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1596,7 +1816,7 @@ Transform:
   m_LocalScale: {x: 1, y: 2.86, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1965767964
 GameObject:
@@ -1612,7 +1832,8 @@ GameObject:
   - component: {fileID: 1965767967}
   - component: {fileID: 1965767966}
   - component: {fileID: 1965767965}
-  m_Layer: 0
+  - component: {fileID: 1965767972}
+  m_Layer: 8
   m_Name: TempGhost (6)
   m_TagString: Ghost
   m_Icon: {fileID: 0}
@@ -1666,11 +1887,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44e511fc39ec93d43b699753e626f71a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  players: []
   minX: -40
   maxX: 40
   minZ: -40
   maxZ: 40
   timer: 6
+  playerDetected: 0
 --- !u!23 &1965767968
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1734,8 +1957,28 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1965767972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1965767964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a28d6ae7725c0f64d8ecd8c2232e77cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewRadius: 10
+  viewAngle: 60
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 256
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 512
+  visibleTargets: []
 --- !u!1 &1997103605
 GameObject:
   m_ObjectHideFlags: 0
@@ -1750,7 +1993,8 @@ GameObject:
   - component: {fileID: 1997103608}
   - component: {fileID: 1997103607}
   - component: {fileID: 1997103606}
-  m_Layer: 0
+  - component: {fileID: 1997103613}
+  m_Layer: 8
   m_Name: TempGhost (4)
   m_TagString: Ghost
   m_Icon: {fileID: 0}
@@ -1804,11 +2048,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44e511fc39ec93d43b699753e626f71a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  players: []
   minX: -40
   maxX: 40
   minZ: -40
   maxZ: 40
   timer: 6
+  playerDetected: 0
 --- !u!23 &1997103609
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1872,5 +2118,25 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1997103613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1997103605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a28d6ae7725c0f64d8ecd8c2232e77cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewRadius: 10
+  viewAngle: 60
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 256
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 512
+  visibleTargets: []
