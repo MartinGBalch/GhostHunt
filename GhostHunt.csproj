@@ -79,11 +79,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Interfaces.cs" />
-    <Compile Include="Assets\Kobey\CameraFollow.cs" />
-    <Compile Include="Assets\Kobey\Movement.cs" />
-    <Compile Include="Assets\Kobey\PlayerDeath.cs" />
+    <Compile Include="Assets\Kobey\LevelPreFabs\SoulCollision.cs" />
+    <Compile Include="Assets\Kobey\LevelPreFabs\SoulDropOff.cs" />
+    <Compile Include="Assets\Kobey\PlayerPrefabs\CameraFollow.cs" />
     <Compile Include="Assets\Kobey\PlayerPrefabs\GhostShotGun.cs" />
+    <Compile Include="Assets\Kobey\PlayerPrefabs\Movement.cs" />
+    <Compile Include="Assets\Kobey\PlayerPrefabs\PlayerDeath.cs" />
     <Compile Include="Assets\Kobey\PlayerPrefabs\ShotgunSpread.cs" />
+    <Compile Include="Assets\Kobey\PlayerPrefabs\SoulCarrier.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Kobey\Particle Dissolve Shader by Moonflower Carnivore\Shaders\legacy\DissolveSoft_Alpha_Additive.shader" />

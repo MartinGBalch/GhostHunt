@@ -10,11 +10,13 @@ public class PlayerDeath : MonoBehaviour, Ikillable {
     bool Respawning;
     public float RespawnTime;
     private float StartRespawn;
+    SoulCarrier carrier;
     Animator anim;
     public int Deaths;
     public bool IsAlive = true;
     void Start ()
     {
+        carrier = GetComponent<SoulCarrier>();
         Deaths = 0;
         anim = GetComponent<Animator>();
         StartRespawn = RespawnTime;
@@ -35,6 +37,7 @@ public class PlayerDeath : MonoBehaviour, Ikillable {
         if(IsAlive == true)
         {
             Deaths++;
+            carrier.DropSouls();
             IsAlive = false;
             anim.SetTrigger("Death");
             Invoke("ReSpawn", 1);
