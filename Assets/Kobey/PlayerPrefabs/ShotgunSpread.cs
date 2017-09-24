@@ -13,10 +13,12 @@ public class ShotgunSpread : MonoBehaviour {
     public string playerNumber;
     public ParticleSystem Pellet;
     public Animator anim;
-    
+    public int Kills;
+    //public LineRenderer line;
     // Use this for initialization
     void Start ()
     {
+        Kills = 0;
         initRotate = (arcDegree * lineCount) / 2;
         transform.Rotate(0, -initRotate, 0);
         startReload = reloadTime;
@@ -39,14 +41,23 @@ public class ShotgunSpread : MonoBehaviour {
                 if(hitInfo.collider.tag == "Test")
                 {
                     Debug.Log("SHOTGUN");
+                    if (hitInfo.collider.GetComponent<PlayerDeath>().IsAlive == true)
+                    {
+                        Kills++;
+                    }
                     hitInfo.collider.GetComponent<Ikillable>().Die();
+                   
                    // Destroy(hitInfo.collider.gameObject);
                 }
             }
-           
 
-
-            Debug.DrawLine(start, (start + (End * distance)));
+            //var LineBaby = line;
+            //LineBaby.transform.position = transform.position;
+            //LineBaby.SetPosition(0, start);
+            //LineBaby.SetPosition(1, (start+(End * (distance/2))));
+            //Instantiate(LineBaby);
+            //Destroy(LineBaby, .5f);
+            //Debug.DrawLine(start, (start + (End * distance)));
             transform.Rotate(0, arcDegree, 0);
         }
         transform.rotation = startRot;

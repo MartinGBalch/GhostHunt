@@ -10,8 +10,13 @@ public class PlayerDeath : MonoBehaviour, Ikillable {
     bool Respawning;
     public float RespawnTime;
     private float StartRespawn;
+    Animator anim;
+    public int Deaths;
+    public bool IsAlive = true;
     void Start ()
     {
+        Deaths = 0;
+        anim = GetComponent<Animator>();
         StartRespawn = RespawnTime;
         movement = GetComponent<Movement>();
         startLocation = transform.position;
@@ -27,7 +32,14 @@ public class PlayerDeath : MonoBehaviour, Ikillable {
 
     public void Die()
     {
-        ReSpawn();
+        if(IsAlive == true)
+        {
+            Deaths++;
+            IsAlive = false;
+            anim.SetTrigger("Death");
+            Invoke("ReSpawn", 1);
+            //ReSpawn();
+        }
     }
 
 	// Update is called once per frame
@@ -39,6 +51,7 @@ public class PlayerDeath : MonoBehaviour, Ikillable {
             RespawnTime -= Time.deltaTime;
             if(RespawnTime <= 0)
             {
+                IsAlive = true;
                 Respawning = false;
                 movement.enabled = true;
                 RespawnTime = StartRespawn;

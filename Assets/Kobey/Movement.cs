@@ -8,7 +8,7 @@ public class Movement : MonoBehaviour {
     Rigidbody rb;
     public float speed;
     public string PlayerNumber;
-
+    public float rollForce;
     Animator anim;
     // Use this for initialization
     void Start ()
@@ -26,11 +26,15 @@ public class Movement : MonoBehaviour {
         float Lookx = Input.GetAxis("RightStickXAxis" + PlayerNumber);
         float lookz = Input.GetAxis("RightStickYAxis" + PlayerNumber);
 
-       
-            anim.SetFloat("MoveMent", horz + vert);
-        
-       
+               
+        anim.SetFloat("Horz", horz);
+        anim.SetFloat("Vert", vert);
 
+        //if(Input.GetButton("Xbutton" + PlayerNumber))
+        //{
+        //    anim.SetTrigger("Roll");
+        //    rb.AddForce(rb.velocity * rollForce);
+        //}
 
         rb.velocity = new Vector3(-horz * speed, 0, vert * speed);
 
