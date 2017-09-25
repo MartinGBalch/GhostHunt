@@ -4,23 +4,27 @@ using UnityEngine;
 using UnityEngine.AI;
 public class GhostAI : MonoBehaviour
 {
+    public float normalSpeed;
+    public float chasingSpeed;
+
     NavMeshAgent agent;
     Collider coll;
     Vector3 target;
     Vector3 targetRange;
-    public Vector3[] players;
-    Vector3 primaryPlayer;
-    RaycastHit hit;
+    public Vector3 primaryPlayer;
     public float minX, maxX, minZ, maxZ;
     public float timer;
     float timerReset;
     public bool playerDetected = false;
-    float[] distToPlayer;
+
 
     void Start ()
     {
         agent = GetComponent<NavMeshAgent>();
         coll = GetComponent<Collider>();
+
+        agent.speed = normalSpeed;
+
         timerReset = timer;
 
         target = new Vector3(Random.Range(minX, maxX), 0, Random.Range(minZ, maxZ));
@@ -28,8 +32,14 @@ public class GhostAI : MonoBehaviour
 	
 	void Update ()
     {
-        if (!playerDetected)
+        if (playerDetected)
         {
+            agent.destination = primaryPlayer;
+            agent.speed = chasingSpeed;
+        }
+        else
+        {
+            agent.speed = normalSpeed;
             agent.destination = target;
             targetRange = new Vector3(target.x - 2.0f, 0, target.z - 2.0f);
 
@@ -40,10 +50,6 @@ public class GhostAI : MonoBehaviour
                 timer = timerReset;
             }
         }
-        else
-        {
-            target = primaryPlayer;
-        }
         
 	}
 
@@ -51,27 +57,5 @@ public class GhostAI : MonoBehaviour
     {
         if (other.gameObject.tag == "GhostWall" || other.gameObject.tag == "Ghost")
             Physics.IgnoreCollision(other.collider, coll);
-    }
-
-    public void ClosestPlayer()
-    {
-        float min = 900000;
-        for(int i = 0; i < 3; ++i)
-        {
-            distToPlayer[i] = Vector3.Distance(transform.position, players[i]);
-            if( min > distToPlayer[i])
-            {
-                min = distToPlayer[i];
-                target = players[i];
-            }
-        }
-
-        //float closestTarget = Mathf.Min(distToPlayer[0], distToPlayer[1], distToPlayer[2], distToPlayer[3]);
-
-        //for(int i = 0; i < 3; ++i)
-        //{
-        //    if (closestTarget == distToPlayer[i])
-        //        target = players[i];
-        //}
     }
 }

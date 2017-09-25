@@ -8,6 +8,9 @@ public class GhostView : MonoBehaviour
     [Range(0,360)]
     public float viewAngle;
 
+    public Vector3[] players;
+    public float[] distToPlayer;
+
     public LayerMask targetMask;
     public LayerMask obstacleMask;
 
@@ -33,13 +36,35 @@ public class GhostView : MonoBehaviour
             if(Vector3.Angle(transform.forward, dirToTarget) < viewAngle / 2)
             {
                 float distToTarget = Vector3.Distance(transform.position, target.position);
-
+                
                 if (!Physics.Raycast(transform.position, dirToTarget, distToTarget, obstacleMask))
                 {
+                    players[i] = target.position;
                     visibleTargets.Add(target);
-                    //GetComponent<GhostAI>().players[i] = target.position;
-                    //GetComponent<GhostAI>().ClosestPlayer();
                 }
+            }
+        }
+    }
+
+    void chooseTarget()
+    {
+        if (visibleTargets.Count > 0)
+            ClosestPlayer();
+        else
+            GetComponent<GhostAI>().playerDetected = false;
+    }
+
+    public void ClosestPlayer()
+    {
+        float min = 900000;
+        for (int i = 0; i < visibleTargets.Count; ++i)
+        {
+            distToPlayer[i] = Vector3.Distance(transform.position, players[i]);
+            if (min > distToPlayer[i])
+            {
+                min = distToPlayer[i];
+                GetComponent<GhostAI>().primaryPlayer = players[i];
+                GetComponent<GhostAI>().playerDetected = true;
             }
         }
     }
@@ -54,6 +79,10 @@ public class GhostView : MonoBehaviour
 	void Start ()
     {
         StartCoroutine("FindTargetsWithDelay", .2f);
-		
 	}
+
+    void Update()
+    {
+        chooseTarget();
+    }
 }
