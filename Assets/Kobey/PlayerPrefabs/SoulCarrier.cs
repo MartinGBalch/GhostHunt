@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class SoulCarrier : MonoBehaviour {
 
     public int carriedSouls;
     public int playerNum;
+    public int maxSoulCount;
     public GameObject Soul;
+    
 	// Use this for initialization
 	void Start ()
     {
@@ -24,7 +26,8 @@ public class SoulCarrier : MonoBehaviour {
     }
 
 	// Update is called once per frame
-	void Update () {
-		
+	void Update ()
+    {
+        
 	}
 }
