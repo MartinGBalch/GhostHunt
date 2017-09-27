@@ -1,0 +1,16 @@
+Kobey
+-Fix Soul Dropping
+-Fix shooting through a wal
+
+Shawn
+-Implement IkillableInterface
+	-Destroys ghosts
+	-Drops a soul
+-Have ghost steal souls from players on collision
+	-GetComponent<SoulCarrier>()
+
+
+Martin
+-Fix up map
+-Implement UI elements for score/Reloading
+ 
