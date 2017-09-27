@@ -84,8 +84,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\GhostAI.cs" />
-    <Compile Include="Assets\GhostView.cs" />
     <Compile Include="Assets\Interfaces.cs" />
     <Compile Include="Assets\Kobey\LevelPreFabs\SoulCollision.cs" />
     <Compile Include="Assets\Kobey\LevelPreFabs\SoulDropOff.cs" />
@@ -95,6 +93,9 @@
     <Compile Include="Assets\Kobey\PlayerPrefabs\PlayerDeath.cs" />
     <Compile Include="Assets\Kobey\PlayerPrefabs\ShotgunSpread.cs" />
     <Compile Include="Assets\Kobey\PlayerPrefabs\SoulCarrier.cs" />
+    <Compile Include="Assets\Scenes\Shawn\GhostAI.cs" />
+    <Compile Include="Assets\Scenes\Shawn\GhostSpawn.cs" />
+    <Compile Include="Assets\Scenes\Shawn\GhostView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Kobey\Particle Dissolve Shader by Moonflower Carnivore\Shaders\legacy\DissolveSoft_Alpha_Additive.shader" />
