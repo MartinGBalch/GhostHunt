@@ -4,7 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - Test
+=======
+  - GhostWall
+  - Ghost
+>>>>>>> Shawn
   layers:
   - Default
   - TransparentFX
@@ -14,8 +19,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Target
+  - Obstacles
   - 
   - 
   - 
