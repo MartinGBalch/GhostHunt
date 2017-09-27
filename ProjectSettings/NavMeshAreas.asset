@@ -86,4 +86,4 @@ NavMeshProjectSettings:
     tileSize: 256
     accuratePlacement: 0
   m_SettingNames:
-  - Humanoid
+  - Ghost
