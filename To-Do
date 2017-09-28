@@ -7,6 +7,7 @@ Kobey
 	-Spotlight sends soft shadows
 	-Player is on its own layer
 	-Player meshes dont send shadows
+-
 
 Shawn
 -Implement IkillableInterface

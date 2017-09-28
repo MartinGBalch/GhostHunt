@@ -1726,6 +1726,10 @@ Prefab:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1819438302516124, guid: 2c31ff76a0fb4d144a5f08cd415dea77, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c31ff76a0fb4d144a5f08cd415dea77, type: 2}
   m_IsPrefabParent: 0
@@ -3263,6 +3267,11 @@ Prefab:
     - target: {fileID: 1380152216301192, guid: ef2dff6061b3002469de23e22e7e1cf9, type: 2}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114736604115587098, guid: ef2dff6061b3002469de23e22e7e1cf9,
+        type: 2}
+      propertyPath: playerNum
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ef2dff6061b3002469de23e22e7e1cf9, type: 2}
@@ -11789,7 +11798,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 0.058823526, g: 0.0350346, b: 0.0350346, a: 1}
-  m_Intensity: 10
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 66.3
   m_CookieSize: 10
