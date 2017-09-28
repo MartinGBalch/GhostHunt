@@ -10,16 +10,18 @@ public class GhostSpawn : MonoBehaviour
     public int startingAmount;
     public float respawnTimer;
     float respawnReset;
-    public int totalGhosts;
+    public int totalGhosts = 0;
 
 	void Start ()
     {
         respawnReset = respawnTimer;
+        totalGhosts = 0;
 
-        for(int i = 1; i < startingAmount; ++i)
+        for (int i = 0; i < startingAmount; ++i)
         {
             Vector3 location = new Vector3(Random.Range(minX,maxX), transform.position.y, Random.Range(minZ, maxZ));
             Instantiate(Ghost, location, Quaternion.identity);
+            Ghost.GetComponent<GhostDeath>().GhostSpawner = gameObject;
             ++totalGhosts;
         }
 	}
@@ -34,6 +36,7 @@ public class GhostSpawn : MonoBehaviour
             {
                 Vector3 location = new Vector3(Random.Range(minX, maxX), transform.position.y, Random.Range(minZ, maxZ));
                 Instantiate(Ghost, location, Quaternion.identity);
+                Ghost.GetComponent<GhostDeath>().GhostSpawner = gameObject;
                 ++totalGhosts;
             }
 

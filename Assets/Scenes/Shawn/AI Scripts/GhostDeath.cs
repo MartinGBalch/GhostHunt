@@ -10,6 +10,7 @@ public class GhostDeath : MonoBehaviour, Ikillable
     bool isAlive = true;
     bool doAnimation = false;
     public float animTimer;
+    public bool dieTest = false;
 
     void Start()
     {
@@ -18,6 +19,9 @@ public class GhostDeath : MonoBehaviour, Ikillable
 
 	void Update ()
     {
+        if (dieTest == true)
+            Die();
+
 		if(doAnimation)
         {
             animTimer -= Time.deltaTime;

@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 // MatCap Shader, (c) 2015-2017 Jean Moreno
 
 Shader "MatCap/Bumped/Plain"
@@ -48,7 +50,7 @@ Shader "MatCap/Bumped/Plain"
 				v2f vert (appdata_tan v)
 				{
 					v2f o;
-					o.pos = mul (UNITY_MATRIX_MVP, v.vertex);
+					o.pos = UnityObjectToClipPos (v.vertex);
 					o.uv_bump = TRANSFORM_TEX(v.texcoord,_BumpMap);
 					
 			#if MATCAP_ACCURATE

@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 195755127843692014}
   - component: {fileID: 114180336401423878}
   - component: {fileID: 95425702357119702}
+  - component: {fileID: 114624542693391606}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: Ghost
@@ -41,7 +42,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1764325055571202}
   m_LocalRotation: {x: 0, y: 0.02976217, z: 0, w: 0.999557}
-  m_LocalPosition: {x: 21.019474, y: 3.03, z: -6.3415003}
+  m_LocalPosition: {x: 0.21677196, y: 5.43, z: -32.563057}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -60,7 +61,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: bed0b7128fe322f46b3c717025f31c74, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85,7 +86,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1764325055571202}
-  m_Mesh: {fileID: 4300000, guid: 9fab513045c7dcc46b6915534a33a5cd, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 4fd050b4788d1bd4fba202d6d15876a1, type: 3}
 --- !u!54 &54232704116864136
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -148,6 +149,21 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   visibleTargets: []
+--- !u!114 &114624542693391606
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1764325055571202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 835badb7d54e5bb45a046a14c9b2ae8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GhostSpawner: {fileID: 0}
+  Soul: {fileID: 1219972017194376, guid: e912df23d4d40f444ac56a9f3e5c5f18, type: 2}
+  animTimer: 1.5
+  dieTest: 0
 --- !u!114 &114674702118713760
 MonoBehaviour:
   m_ObjectHideFlags: 1
