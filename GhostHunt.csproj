@@ -96,6 +96,7 @@
     <Compile Include="Assets\Kobey\PlayerPrefabs\ShotgunSpread.cs" />
     <Compile Include="Assets\Kobey\PlayerPrefabs\SoulCarrier.cs" />
     <Compile Include="Assets\Scenes\Shawn\AI Scripts\GhostAI.cs" />
+    <Compile Include="Assets\Scenes\Shawn\AI Scripts\GhostDamage.cs" />
     <Compile Include="Assets\Scenes\Shawn\AI Scripts\GhostDeath.cs" />
     <Compile Include="Assets\Scenes\Shawn\AI Scripts\GhostSpawn.cs" />
     <Compile Include="Assets\Scenes\Shawn\AI Scripts\GhostView.cs" />
