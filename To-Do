@@ -1,13 +1,13 @@
 Kobey
 -Fix Soul Dropping <Fixed>
--Fix shooting through a wall <Fixed>
+-Fix shooting through a wall <Not Fixed>
 -Lighting Elements <Fixed>
--Spotlight goes through walls <Fixed>
+-Spotlight goes through walls <Not Fixed>
 	-All walls and floors receive shadows
 	-Spotlight sends soft shadows
 	-Player is on its own layer
 	-Player meshes dont send shadows
--
+
 
 Shawn
 -Implement IkillableInterface
@@ -23,3 +23,13 @@ Martin
 -Add borders for the cameras
 -Add skybox
  
+
+
+
+Playtesting:
+-Too many ghosts
+-Ghost camp players
+-souls are too bright
+-Too many souls
+-Aiming sucks, particles feel like shit
+-Too Dark
