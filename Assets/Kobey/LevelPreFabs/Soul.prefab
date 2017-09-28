@@ -349,7 +349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe757b11828a3744a81b292f764eecda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soulAmount: 3
+  soulAmount: 1
 --- !u!123 &123883252314458624
 LensFlare:
   m_ObjectHideFlags: 1

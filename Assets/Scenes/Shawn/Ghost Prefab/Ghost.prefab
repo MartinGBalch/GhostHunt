@@ -100,7 +100,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 20
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!95 &95425702357119702
 Animator:
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GhostSpawner: {fileID: 0}
   Soul: {fileID: 1219972017194376, guid: e912df23d4d40f444ac56a9f3e5c5f18, type: 2}
-  animTimer: 1.5
+  animTimer: 0
   dieTest: 0
 --- !u!114 &114674702118713760
 MonoBehaviour:
