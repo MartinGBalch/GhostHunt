@@ -1,8 +1,9 @@
 ﻿<Properties StartupItem="GhostHunt.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Kobey\LevelPreFabs\SoulCollision.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Martin\HighQualityBricks&amp;Walls\README.txt">
     <Files>
       <File FileName="Assets\Kobey\LevelPreFabs\SoulCollision.cs" Line="15" Column="1" />
+      <File FileName="Assets\Martin\HighQualityBricks&amp;Walls\README.txt" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
