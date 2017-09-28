@@ -88,6 +88,7 @@
     <Compile Include="Assets\Kobey\LevelPreFabs\SoulCollision.cs" />
     <Compile Include="Assets\Kobey\LevelPreFabs\SoulDropOff.cs" />
     <Compile Include="Assets\Kobey\PlayerPrefabs\CameraFollow.cs" />
+    <Compile Include="Assets\Kobey\PlayerPrefabs\FlashLightController.cs" />
     <Compile Include="Assets\Kobey\PlayerPrefabs\GhostShotGun.cs" />
     <Compile Include="Assets\Kobey\PlayerPrefabs\Movement.cs" />
     <Compile Include="Assets\Kobey\PlayerPrefabs\PlayerDeath.cs" />

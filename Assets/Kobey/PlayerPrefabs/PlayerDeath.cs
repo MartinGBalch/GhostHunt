@@ -14,6 +14,7 @@ public class PlayerDeath : MonoBehaviour, Ikillable {
     Animator anim;
     public int Deaths;
     public bool IsAlive = true;
+    
     void Start ()
     {
         carrier = GetComponent<SoulCarrier>();
@@ -24,6 +25,8 @@ public class PlayerDeath : MonoBehaviour, Ikillable {
         startLocation = transform.position;
 	}
 	
+
+   
 
     void ReSpawn()
     {
@@ -54,6 +57,7 @@ public class PlayerDeath : MonoBehaviour, Ikillable {
             RespawnTime -= Time.deltaTime;
             if(RespawnTime <= 0)
             {
+                
                 IsAlive = true;
                 Respawning = false;
                 movement.enabled = true;

@@ -1,6 +1,7 @@
 Kobey
--Fix Soul Dropping
--Fix shooting through a wal
+-Fix Soul Dropping <Check>
+-Fix shooting through a wall
+-Lighting Elements
 
 Shawn
 -Implement IkillableInterface

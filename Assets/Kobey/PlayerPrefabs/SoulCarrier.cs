@@ -17,12 +17,21 @@ public class SoulCarrier : MonoBehaviour {
 	
     public void DropSouls()
     {
-        for(int i =0; i < carriedSouls; i++)
+        if(carriedSouls > 0)
         {
             var babySoul = Soul;
             babySoul.transform.position = transform.position;
+            babySoul.GetComponent<SoulCollision>().soulAmount = carriedSouls;
+            carriedSouls = 0;
             Instantiate(babySoul);
         }
+      
+        //for(int i = 0; i < carriedSouls; i++)
+        //{
+        //    var babySoul = Soul;
+        //    babySoul.transform.position = transform.position;
+        //    Instantiate(babySoul);
+        //}
     }
 
 	// Update is called once per frame

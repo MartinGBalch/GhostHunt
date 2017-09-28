@@ -5,7 +5,7 @@ using UnityEngine;
 public class SoulCollision : MonoBehaviour {
 
     public int soulAmount;
-
+    
 
     private void OnTriggerEnter(Collider other)
     {
@@ -22,13 +22,23 @@ public class SoulCollision : MonoBehaviour {
         }
     }
 
+    void TurnCollisionOn()
+    {
+        GetComponent<SphereCollider>().enabled = true;
+        //Debug.Log("CollisionOn");
+    }
+
     // Use this for initialization
-    void Start () {
-		
+    void Start ()
+    {
+       // Debug.Log("CollisionOff");
+        GetComponent<SphereCollider>().enabled = false;
+        Invoke("TurnCollisionOn", 2);
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	void Update ()
+    {
+       
 	}
 }
