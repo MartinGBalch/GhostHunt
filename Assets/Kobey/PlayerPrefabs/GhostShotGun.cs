@@ -32,13 +32,16 @@ public class GhostShotGun : MonoBehaviour {
             RaycastHit hitInfo;
             if (Physics.Raycast(start, End, out hitInfo, distance))
             {
-
-                if (hitInfo.collider.tag == "Ghost")
-                {
-                    Debug.Log("Ghost");
-                    hitInfo.collider.GetComponent<Ikillable>().Die();
-                    //Destroy(hitInfo.collider.gameObject);
-                }
+                //Shoot through walls fix?
+               
+                    if (hitInfo.collider.tag == "Ghost")
+                    {
+                        Debug.Log("Ghost");
+                        hitInfo.collider.GetComponent<Ikillable>().Die();
+                        //Destroy(hitInfo.collider.gameObject);
+                    }
+                
+               
             }
 
 
