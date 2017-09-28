@@ -9,13 +9,14 @@ public class GhostAI : MonoBehaviour
 
     NavMeshAgent agent;
     Collider coll;
-    Vector3 target;
+    public Vector3 target;
     Vector3 targetRange;
     public Vector3 primaryPlayer;
     public float minX, maxX, minZ, maxZ;
     public float timer;
     float timerReset;
     public bool playerDetected = false;
+    public bool Dieing = false;
 
 
     void Start ()
@@ -32,23 +33,31 @@ public class GhostAI : MonoBehaviour
 	
 	void Update ()
     {
-        if (playerDetected)
+        if (!Dieing)
         {
-            agent.destination = primaryPlayer;
-            agent.speed = chasingSpeed;
+            if (playerDetected)
+            {
+                agent.destination = primaryPlayer;
+                agent.speed = chasingSpeed;
+            }
+            else
+            {
+                agent.speed = normalSpeed;
+                agent.destination = target;
+                targetRange = new Vector3(target.x - 2.0f, 0, target.z - 2.0f);
+
+                timer -= Time.deltaTime;
+                if (transform.position.x >= targetRange.x && transform.position.z >= targetRange.z || timer <= 0)
+                {
+                    target = new Vector3(Random.Range(minX, maxX), 4, Random.Range(minZ, maxZ));
+                    timer = timerReset;
+                }
+            }
         }
         else
         {
-            agent.speed = normalSpeed;
-            agent.destination = target;
-            targetRange = new Vector3(target.x - 2.0f, 0, target.z - 2.0f);
-
-            timer -= Time.deltaTime;
-            if (transform.position.x >= targetRange.x && transform.position.z >= targetRange.z || timer <= 0)
-            {
-                target = new Vector3(Random.Range(minX, maxX), 4, Random.Range(minZ, maxZ));
-                timer = timerReset;
-            }
+            target = Vector3.forward;
+            agent.speed = 0;
         }
         
 	}

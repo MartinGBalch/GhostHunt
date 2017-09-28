@@ -10,7 +10,7 @@ public class GhostSpawn : MonoBehaviour
     public int startingAmount;
     public float respawnTimer;
     float respawnReset;
-    int totalGhosts;
+    public int totalGhosts;
 
 	void Start ()
     {
@@ -18,7 +18,7 @@ public class GhostSpawn : MonoBehaviour
 
         for(int i = 1; i < startingAmount; ++i)
         {
-            Vector3 location = new Vector3(Random.Range(minX,maxX), 4, Random.Range(minZ, maxZ));
+            Vector3 location = new Vector3(Random.Range(minX,maxX), transform.position.y, Random.Range(minZ, maxZ));
             Instantiate(Ghost, location, Quaternion.identity);
             ++totalGhosts;
         }
@@ -32,7 +32,7 @@ public class GhostSpawn : MonoBehaviour
         {
             if(totalGhosts < maxAmount)
             {
-                Vector3 location = new Vector3(Random.Range(minX, maxX), 4, Random.Range(minZ, maxZ));
+                Vector3 location = new Vector3(Random.Range(minX, maxX), transform.position.y, Random.Range(minZ, maxZ));
                 Instantiate(Ghost, location, Quaternion.identity);
                 ++totalGhosts;
             }
