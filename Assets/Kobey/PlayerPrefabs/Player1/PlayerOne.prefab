@@ -303,7 +303,7 @@ GameObject:
   - component: {fileID: 114588780636669772}
   - component: {fileID: 114534341447069336}
   - component: {fileID: 114792678977810202}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerOne
   m_TagString: Test
   m_Icon: {fileID: 0}
