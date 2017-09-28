@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Test
   - Ghost
-  - GhostWall
   layers:
   - Default
   - TransparentFX
@@ -16,13 +15,8 @@ TagManager:
   - UI
   - 
   - 
-<<<<<<< HEAD
-  - Wall
-  - Player
-=======
-  - Target
-  - Obstacle
->>>>>>> Shawn
+  - 
+  - 
   - 
   - 
   - 
