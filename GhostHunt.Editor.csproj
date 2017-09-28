@@ -182,6 +182,7 @@
     <None Include="Assets\Kobey\Particle Dissolve Shader by Moonflower Carnivore\Shaders\softrim\Particle_softrim_alpha_stretch.shader" />
     <None Include="Assets\Kobey\Particle Dissolve Shader by Moonflower Carnivore\Shaders\unity5\Particle_Softrim_Dissolve_additive.shader" />
     <None Include="Assets\Kobey\Particle Dissolve Shader by Moonflower Carnivore\Shaders\unity5\Particle_Softrim_Dissolve_alpha.shader" />
+    <None Include="Assets\Models\Materials\Velvet\Velvet.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

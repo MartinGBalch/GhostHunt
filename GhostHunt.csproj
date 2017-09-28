@@ -96,10 +96,16 @@
     <Compile Include="Assets\Kobey\PlayerPrefabs\PlayerDeath.cs" />
     <Compile Include="Assets\Kobey\PlayerPrefabs\ShotgunSpread.cs" />
     <Compile Include="Assets\Kobey\PlayerPrefabs\SoulCarrier.cs" />
+<<<<<<< HEAD
     <Compile Include="Assets\Scenes\Shawn\AI Scripts\GhostAI.cs" />
     <Compile Include="Assets\Scenes\Shawn\AI Scripts\GhostDeath.cs" />
     <Compile Include="Assets\Scenes\Shawn\AI Scripts\GhostSpawn.cs" />
     <Compile Include="Assets\Scenes\Shawn\AI Scripts\GhostView.cs" />
+=======
+    <Compile Include="Assets\Shawn\GhostAI.cs" />
+    <Compile Include="Assets\Shawn\GhostSpawn.cs" />
+    <Compile Include="Assets\Shawn\GhostView.cs" />
+>>>>>>> Martin
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\JMO Assets\!JMO Assets Readme.txt" />
@@ -137,6 +143,7 @@
     <None Include="Assets\Kobey\Particle Dissolve Shader by Moonflower Carnivore\Shaders\softrim\Particle_softrim_alpha_stretch.shader" />
     <None Include="Assets\Kobey\Particle Dissolve Shader by Moonflower Carnivore\Shaders\unity5\Particle_Softrim_Dissolve_additive.shader" />
     <None Include="Assets\Kobey\Particle Dissolve Shader by Moonflower Carnivore\Shaders\unity5\Particle_Softrim_Dissolve_alpha.shader" />
+    <None Include="Assets\Models\Materials\Velvet\Velvet.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
