@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33390945829837018}
   - component: {fileID: 135251733007935500}
   - component: {fileID: 23429486320724970}
+  - component: {fileID: 114098699330358308}
   m_Layer: 0
   m_Name: GhostSpawner
   m_TagString: Untagged
@@ -48,7 +49,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1029091526023720}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -81,6 +82,25 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1029091526023720}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114098699330358308
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1029091526023720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4d7ef22142853d4ea4d158f127c4eec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ghost: {fileID: 1764325055571202, guid: d8966a2aa20bba041bb722697783f20d, type: 2}
+  minX: -35
+  maxX: 20
+  minZ: -40
+  maxZ: 10
+  maxAmount: 10
+  startingAmount: 5
+  respawnTimer: 3
 --- !u!135 &135251733007935500
 SphereCollider:
   m_ObjectHideFlags: 1

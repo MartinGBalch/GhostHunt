@@ -27,7 +27,7 @@ public class GhostAI : MonoBehaviour
 
         timerReset = timer;
 
-        target = new Vector3(Random.Range(minX, maxX), 0, Random.Range(minZ, maxZ));
+        target = new Vector3(Random.Range(minX, maxX), 4, Random.Range(minZ, maxZ));
     }
 	
 	void Update ()
@@ -46,7 +46,7 @@ public class GhostAI : MonoBehaviour
             timer -= Time.deltaTime;
             if (transform.position.x >= targetRange.x && transform.position.z >= targetRange.z || timer <= 0)
             {
-                target = new Vector3(Random.Range(minX, maxX), 0, Random.Range(minZ, maxZ));
+                target = new Vector3(Random.Range(minX, maxX), 4, Random.Range(minZ, maxZ));
                 timer = timerReset;
             }
         }
