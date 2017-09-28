@@ -23,12 +23,12 @@ public class FlashLightController : MonoBehaviour {
         if(isOn)
         {
             light.intensity = startIntensity;
-            Debug.Log("Light On");
+            //Debug.Log("Light On");
             
         }
         else
         {
-            Debug.Log("Light Off");
+           // Debug.Log("Light Off");
             light.intensity = 0;
         }
     }
@@ -38,7 +38,7 @@ public class FlashLightController : MonoBehaviour {
         press = Input.GetButtonDown("Xbutton" + PlayerNum);
         if (press)
         {
-            Debug.Log("Attempt Switch");
+            Debug.Log("Attempt Switch on player " + PlayerNum);
             isOn = !isOn;
             Switchlight();
         }

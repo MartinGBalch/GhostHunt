@@ -12,9 +12,11 @@ public class GhostShotGun : MonoBehaviour {
     private float startReload;
     public string playerNumber;
     public ParticleSystem Pellet;
+    AudioSource sounds;
     // Use this for initialization
     void Start()
     {
+        sounds = GetComponent<AudioSource>();
         initRotate = (arcDegree * lineCount) / 2;
         transform.Rotate(0, -initRotate, 0);
         startReload = reloadTime;
@@ -24,25 +26,34 @@ public class GhostShotGun : MonoBehaviour {
     void Shoot()
     {
         Pellet.Play();
+        sounds.Play();
         Quaternion startRot = transform.rotation;
         for (int i = 0; i < lineCount; i++)
         {
             Vector3 start = transform.position;
             Vector3 End = (transform.forward);
+            RaycastHit sphereHit;
             RaycastHit hitInfo;
-            if (Physics.Raycast(start, End, out hitInfo, distance))
+            if(Physics.SphereCast(start,3, transform.forward,out sphereHit))
             {
-                //Shoot through walls fix?
-               
-                    if (hitInfo.collider.tag == "Ghost")
+                if(sphereHit.collider.tag != "GhostWALL")
+                {
+                    if (Physics.Raycast(start, End, out hitInfo, distance))
                     {
-                        Debug.Log("Ghost");
-                        hitInfo.collider.GetComponent<Ikillable>().Die();
-                        //Destroy(hitInfo.collider.gameObject);
+                        //Shoot through walls fix?
+
+                        if (hitInfo.collider.tag == "Ghost")
+                        {
+                            Debug.Log("Ghost");
+                            hitInfo.collider.GetComponent<Ikillable>().Die();
+                            //Destroy(hitInfo.collider.gameObject);
+                        }
+
+
                     }
-                
-               
+                }
             }
+            
 
 
 

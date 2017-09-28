@@ -1,7 +1,12 @@
 Kobey
--Fix Soul Dropping <Check>
--Fix shooting through a wall (Fixed with larger player colliders)
--Lighting Elements
+-Fix Soul Dropping <Fixed>
+-Fix shooting through a wall <Fixed>
+-Lighting Elements <Fixed>
+-Spotlight goes through walls <Fixed>
+	-All walls and floors receive shadows
+	-Spotlight sends soft shadows
+	-Player is on its own layer
+	-Player meshes dont send shadows
 
 Shawn
 -Implement IkillableInterface

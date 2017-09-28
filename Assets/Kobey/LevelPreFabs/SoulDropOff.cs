@@ -22,6 +22,7 @@ public class SoulDropOff : MonoBehaviour {
                 {
                     storedSouls += soulCarrier.carriedSouls;
                     soulCarrier.carriedSouls = 0;
+                    soulCarrier.UpdateLight();
 
                 }
             }

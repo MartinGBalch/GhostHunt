@@ -14,10 +14,14 @@ public class ShotgunSpread : MonoBehaviour {
     public ParticleSystem Pellet;
     public Animator anim;
     public int Kills;
+   // AudioSource shotgunBlast;
+    AudioSource[] sounds;
     //public LineRenderer line;
     // Use this for initialization
     void Start ()
     {
+       //shotgunBlast = GetComponent<AudioSource>();
+        sounds = GetComponents<AudioSource>();
         Kills = 0;
         initRotate = (arcDegree * lineCount) / 2;
         transform.Rotate(0, -initRotate, 0);
@@ -25,31 +29,42 @@ public class ShotgunSpread : MonoBehaviour {
         reloadTime = 0;
 	}
 	
+    
+
     void Shoot()
     {
-        anim.SetTrigger("Reloading");
+        sounds[0].Play();
         Pellet.Play();
         Quaternion startRot = transform.rotation;
         for (int i = 0; i < lineCount; i++)
         {
             Vector3 start = transform.position;
             Vector3 End = (transform.forward );
+            RaycastHit sphereHit;
             RaycastHit hitInfo;
-            if(Physics.Raycast(start, End, out hitInfo, distance))
+
+            if (Physics.SphereCast(start, 3, transform.forward, out sphereHit))
             {
-                
-                if(hitInfo.collider.tag == "Test")
+                if(sphereHit.collider.tag != "GhostWall")
                 {
-                    Debug.Log("SHOTGUN");
-                    if (hitInfo.collider.GetComponent<PlayerDeath>().IsAlive == true)
+                    if (Physics.Raycast(start, End, out hitInfo, distance))
                     {
-                        Kills++;
+                        if (hitInfo.collider.tag == "Test")
+                        {
+                            Debug.Log("SHOTGUN");
+                            if (hitInfo.collider.GetComponent<PlayerDeath>().IsAlive == true)
+                            {
+                                Kills++;
+                            }
+                            hitInfo.collider.GetComponent<Ikillable>().Die();
+
+                            // Destroy(hitInfo.collider.gameObject);
+                        }
                     }
-                    hitInfo.collider.GetComponent<Ikillable>().Die();
-                   
-                   // Destroy(hitInfo.collider.gameObject);
                 }
             }
+
+            
 
             //var LineBaby = line;
             //LineBaby.transform.position = transform.position;
@@ -61,6 +76,8 @@ public class ShotgunSpread : MonoBehaviour {
             transform.Rotate(0, arcDegree, 0);
         }
         transform.rotation = startRot;
+        anim.SetTrigger("Reloading");
+        sounds[1].PlayDelayed(1);
     }
 
 	// Update is called once per frame

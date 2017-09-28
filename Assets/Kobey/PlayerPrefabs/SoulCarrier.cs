@@ -8,13 +8,32 @@ public class SoulCarrier : MonoBehaviour {
     public int playerNum;
     public int maxSoulCount;
     public GameObject Soul;
-    
+    private float lightIntensity;
+    private float lightRange;
+    public new Light light;
+
+    float maxRange = 8;
+    float maxIntensity = 6;
+    float rangeIncrement;
+    float intensityIncrement;
 	// Use this for initialization
 	void Start ()
     {
-        carriedSouls = 0;	
+        carriedSouls = 0;
+        lightIntensity = 0;
+        rangeIncrement = maxIntensity / maxSoulCount;
+        intensityIncrement = maxRange / maxSoulCount;
+        light.intensity = lightIntensity;
 	}
 	
+    public void UpdateLight()
+    {
+        lightIntensity = carriedSouls * intensityIncrement;
+        lightRange = carriedSouls * rangeIncrement;
+        light.intensity = lightIntensity;
+        light.range = lightRange;
+    }
+
     public void DropSouls()
     {
         if(carriedSouls > 0)
@@ -23,6 +42,7 @@ public class SoulCarrier : MonoBehaviour {
             babySoul.transform.position = transform.position;
             babySoul.GetComponent<SoulCollision>().soulAmount = carriedSouls;
             carriedSouls = 0;
+            UpdateLight();
             Instantiate(babySoul);
         }
       
