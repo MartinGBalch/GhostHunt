@@ -42,7 +42,7 @@ public class ShotgunSpread : MonoBehaviour {
             Vector3 End = (transform.forward );
             RaycastHit sphereHit;
             RaycastHit hitInfo;
-
+            Debug.DrawLine(start, (start + (End * distance)));
             if (Physics.SphereCast(start, 3, transform.forward, out sphereHit))
             {
                 if(sphereHit.collider.tag != "GhostWall")
@@ -57,7 +57,7 @@ public class ShotgunSpread : MonoBehaviour {
                                 Kills++;
                             }
                             hitInfo.collider.GetComponent<Ikillable>().Die();
-
+                            return;
                             // Destroy(hitInfo.collider.gameObject);
                         }
                     }
@@ -72,7 +72,7 @@ public class ShotgunSpread : MonoBehaviour {
             //LineBaby.SetPosition(1, (start+(End * (distance/2))));
             //Instantiate(LineBaby);
             //Destroy(LineBaby, .5f);
-            //Debug.DrawLine(start, (start + (End * distance)));
+            
             transform.Rotate(0, arcDegree, 0);
         }
         transform.rotation = startRot;

@@ -46,9 +46,10 @@ public class GhostShotGun : MonoBehaviour {
                         {
                             Debug.Log("Ghost");
                             hitInfo.collider.GetComponent<Ikillable>().Die();
+                            return;
                             //Destroy(hitInfo.collider.gameObject);
                         }
-
+                       
 
                     }
                 }
