@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class FlashLightController : MonoBehaviour {
 
-    //public GameObject light;
-    Light light;
+    new Light light;
+    //Light light;
     private float startIntensity;
     public bool isOn = true;
     public string PlayerNum;
+    public bool press;
 	// Use this for initialization
 	void Start () {
-        light = GetComponent<Light>();
+        
+        light = gameObject.GetComponent<Light>();
         if (light != null) { Debug.Log("Light attacjed"); }
         startIntensity = light.intensity;
 	}
@@ -22,7 +24,7 @@ public class FlashLightController : MonoBehaviour {
         {
             light.intensity = startIntensity;
             Debug.Log("Light On");
-
+            
         }
         else
         {
@@ -33,14 +35,15 @@ public class FlashLightController : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (Input.GetButtonDown("Xbutton" + PlayerNum))
+        press = Input.GetButtonDown("Xbutton" + PlayerNum);
+        if (press)
         {
             Debug.Log("Attempt Switch");
             isOn = !isOn;
             Switchlight();
         }
 
-
+        Switchlight();
 
     }
 }
