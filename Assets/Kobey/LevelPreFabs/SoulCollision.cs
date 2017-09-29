@@ -5,7 +5,8 @@ using UnityEngine;
 public class SoulCollision : MonoBehaviour {
 
     public int soulAmount;
-    
+    [HideInInspector]
+    public float CollisionDelay = 0;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -34,7 +35,7 @@ public class SoulCollision : MonoBehaviour {
     {
        // Debug.Log("CollisionOff");
         GetComponent<SphereCollider>().enabled = false;
-        Invoke("TurnCollisionOn", 2);
+        Invoke("TurnCollisionOn", CollisionDelay);
 	}
 	
 	// Update is called once per frame
