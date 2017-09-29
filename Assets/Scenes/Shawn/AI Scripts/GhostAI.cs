@@ -44,7 +44,7 @@ public class GhostAI : MonoBehaviour
             {
                 agent.speed = normalSpeed;
                 agent.destination = target;
-                targetRange = new Vector3(target.x - 2.0f, 0, target.z - 2.0f);
+                targetRange = new Vector3(target.x - 3.0f, 0, target.z - 3.0f);
 
                 timer -= Time.deltaTime;
                 if (transform.position.x >= targetRange.x && transform.position.z >= targetRange.z || timer <= 0)

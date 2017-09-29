@@ -1,0 +1,43 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class Timer : MonoBehaviour
+{
+    public float time;
+    int Min;
+    int Sec;
+    Text RoundTimer;
+
+    // Use this for initialization
+    void Start ()
+    {
+        RoundTimer = GetComponent<Text>();
+        
+    }
+	
+	// Update is called once per frame
+	void Update ()
+    {
+        time -= Time.deltaTime;
+        Min = (int)time / 60;
+        Sec = (int)time%60;
+        GameTime();
+
+    }
+
+    void GameTime()
+    {
+        if (Sec >= 10)
+        {
+            RoundTimer.text = Min + ":" + Sec;
+        }
+        else
+        {
+            RoundTimer.text = Min + ":0" + Sec;
+        }
+       
+
+    }
+}
