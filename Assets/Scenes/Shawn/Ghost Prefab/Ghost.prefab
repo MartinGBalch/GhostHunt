@@ -356,10 +356,10 @@ MonoBehaviour:
   chasingSpeed: 8
   target: {x: 0, y: 0, z: 0}
   primaryPlayer: {x: 0, y: 0, z: 0}
-  minX: -40
-  maxX: 40
-  minZ: -40
-  maxZ: 40
+  minX: -55
+  maxX: 35
+  minZ: -70
+  maxZ: 8
   timer: 4
   playerDetected: 0
   Dieing: 0
