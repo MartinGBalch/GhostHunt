@@ -87,6 +87,7 @@
     <Compile Include="Assets\Interfaces.cs" />
     <Compile Include="Assets\JMO Assets\MatCap Shaders\Demo\Assets\MC_AutoRotate.cs" />
     <Compile Include="Assets\JMO Assets\MatCap Shaders\Demo\Assets\MC_SwitchTexture.cs" />
+    <Compile Include="Assets\Kobey\LevelPreFabs\masterSoulDropOff.cs" />
     <Compile Include="Assets\Kobey\LevelPreFabs\SoulCollision.cs" />
     <Compile Include="Assets\Kobey\LevelPreFabs\SoulDropOff.cs" />
     <Compile Include="Assets\Kobey\PlayerPrefabs\CameraFollow.cs" />
