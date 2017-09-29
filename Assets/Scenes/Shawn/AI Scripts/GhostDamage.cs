@@ -12,7 +12,8 @@ public class GhostDamage : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             if(other.gameObject.GetComponent<SoulCarrier>().carriedSouls > 0)
-            other.gameObject.GetComponent<SoulCarrier>().carriedSouls -= amount;
+                other.gameObject.GetComponent<SoulCarrier>().carriedSouls -= amount;
+            other.gameObject.GetComponent<SoulCarrier>().UpdateLight();
             //Do flash
             Destroy(gameObject);
         }
