@@ -19,7 +19,7 @@ public class GhostSpawn : MonoBehaviour
 
         for (int i = 0; i < startingAmount; ++i)
         {
-            Vector3 location = new Vector3(Random.Range(minX,maxX), transform.position.y, Random.Range(minZ, maxZ));
+            Vector3 location = new Vector3(transform.position.x + (Random.Range(minX,maxX)), transform.position.y, transform.position.z + Random.Range(minZ, maxZ));
             Instantiate(Ghost, location, Quaternion.identity);
             Ghost.GetComponent<GhostDeath>().GhostSpawner = gameObject;
             Ghost.GetComponent<GhostDamage>().GhostSpawner = gameObject;
@@ -35,7 +35,7 @@ public class GhostSpawn : MonoBehaviour
         {
             if(totalGhosts < maxAmount)
             {
-                Vector3 location = new Vector3(Random.Range(minX, maxX), transform.position.y, Random.Range(minZ, maxZ));
+                Vector3 location = new Vector3(transform.position.x + Random.Range(minX, maxX), transform.position.y, transform.position.z + Random.Range(minZ, maxZ));
                 Instantiate(Ghost, location, Quaternion.identity);
                 Ghost.GetComponent<GhostDeath>().GhostSpawner = gameObject;
                 Ghost.GetComponent<GhostDamage>().GhostSpawner = gameObject;

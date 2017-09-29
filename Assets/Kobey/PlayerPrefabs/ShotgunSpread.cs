@@ -12,6 +12,8 @@ public class ShotgunSpread : MonoBehaviour {
     private float startReload;
     public string playerNumber;
     public ParticleSystem Pellet;
+    public GameObject Player;
+    PlayerDeath death;
     public Animator anim;
     public int Kills;
    // AudioSource shotgunBlast;
@@ -21,6 +23,7 @@ public class ShotgunSpread : MonoBehaviour {
     public Quaternion startRot;
     void Start ()
     {
+        death = Player.GetComponent<PlayerDeath>();
        //shotgunBlast = GetComponent<AudioSource>();
         sounds = GetComponents<AudioSource>();
         Kills = 0;
@@ -34,56 +37,60 @@ public class ShotgunSpread : MonoBehaviour {
 
     void Shoot()
     {
-        sounds[0].Play();
-        Pellet.Play();
-        startRot = transform.rotation;
-        Vector3 start = transform.position;
-        
-        for (int i = 0; i < lineCount; i++)
+        if(death.IsAlive == true)
         {
-            transform.Rotate(0, arcDegree * i, 0);
+            sounds[0].Play();
+            Pellet.Play();
+            startRot = transform.rotation;
+            Vector3 start = transform.position;
 
-
-            Vector3 End = (transform.forward );
-            RaycastHit sphereHit;
-            RaycastHit hitInfo;
-            Debug.DrawLine(start, (start + (End * distance)));
-            if (Physics.SphereCast(start, 0.5f, transform.forward, out sphereHit))
+            for (int i = 0; i < lineCount; i++)
             {
-                if(sphereHit.collider.tag != "GhostWall")
+                transform.Rotate(0, arcDegree * i, 0);
+
+
+                Vector3 End = (transform.forward);
+                RaycastHit sphereHit;
+                RaycastHit hitInfo;
+                Debug.DrawLine(start, (start + (End * distance)));
+                if (Physics.SphereCast(start, 0.5f, transform.forward, out sphereHit))
                 {
-                    if (Physics.Raycast(start, End, out hitInfo, distance))
+                    if (sphereHit.collider.tag != "GhostWall")
                     {
-                       
-                        if (hitInfo.collider.tag == "Test")
+                        if (Physics.Raycast(start, End, out hitInfo, distance))
                         {
-                            Debug.Log("SHOTGUN");
-                            if (hitInfo.collider.GetComponent<PlayerDeath>().IsAlive == true)
+
+                            if (hitInfo.collider.tag == "Test")
                             {
-                                Kills++;
+                                Debug.Log("SHOTGUN");
+                                if (hitInfo.collider.GetComponent<PlayerDeath>().IsAlive == true)
+                                {
+                                    Kills++;
+                                }
+                                hitInfo.collider.GetComponent<Ikillable>().Die();
+
+                                // Destroy(hitInfo.collider.gameObject);
                             }
-                            hitInfo.collider.GetComponent<Ikillable>().Die();
-                            
-                            // Destroy(hitInfo.collider.gameObject);
                         }
                     }
                 }
+
+
+
+                //var LineBaby = line;
+                //LineBaby.transform.position = transform.position;
+                //LineBaby.SetPosition(0, start);
+                //LineBaby.SetPosition(1, (start+(End * (distance/2))));
+                //Instantiate(LineBaby);
+                //Destroy(LineBaby, .5f);
+                //startRot.SetLookRotation(transform.rotation + * i));
+                transform.rotation = startRot;
             }
-
-
-
-            //var LineBaby = line;
-            //LineBaby.transform.position = transform.position;
-            //LineBaby.SetPosition(0, start);
-            //LineBaby.SetPosition(1, (start+(End * (distance/2))));
-            //Instantiate(LineBaby);
-            //Destroy(LineBaby, .5f);
-            //startRot.SetLookRotation(transform.rotation + * i));
             transform.rotation = startRot;
+            anim.SetTrigger("Reloading");
+            sounds[1].PlayDelayed(1);
         }
-        transform.rotation = startRot;
-        anim.SetTrigger("Reloading");
-        sounds[1].PlayDelayed(1);
+        
     }
 
 	// Update is called once per frame
