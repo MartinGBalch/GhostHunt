@@ -12,12 +12,15 @@ public class Movement : MonoBehaviour {
     Animator anim;
     private float normalSpeed;
     public float sprintSpeed;
+    public float SprintTime;
+    private float startSprint;
     // Use this for initialization
     void Start ()
     {
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
         normalSpeed = speed;
+        startSprint = SprintTime;
 	}
 	
 	// Update is called once per frame
@@ -33,11 +36,24 @@ public class Movement : MonoBehaviour {
         anim.SetFloat("Horz", horz);
         anim.SetFloat("Vert", vert);
 
-        if(Input.GetButton("Bbutton" + PlayerNumber))
+        if(Input.GetButton("Bbutton" + PlayerNumber) && SprintTime > 0)
         {
+            SprintTime -= Time.deltaTime;
             speed = sprintSpeed;
+            SprintTime = Mathf.Clamp(SprintTime, -0.5f, startSprint);
         }
-        else { speed = normalSpeed; }
+        else if (SprintTime < 0 && Input.GetButton("Bbutton" + PlayerNumber))
+        {
+            speed = normalSpeed;
+            SprintTime = -0.5f;
+        }
+        else
+        {
+            speed = normalSpeed;
+            SprintTime += Time.deltaTime;
+            SprintTime = Mathf.Clamp(SprintTime, -0.5f, startSprint);
+        }
+
 
         rb.velocity = new Vector3(-horz * speed, 0, vert * speed);
 
