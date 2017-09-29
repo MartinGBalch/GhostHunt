@@ -4324,9 +4324,9 @@ MonoBehaviour:
   maxX: 10
   minZ: -30
   maxZ: 10
-  maxAmount: 5
-  startingAmount: 2
-  respawnTimer: 3
+  maxAmount: 10
+  startingAmount: 4
+  respawnTimer: 4
   totalGhosts: 0
 --- !u!23 &812694800
 MeshRenderer:
@@ -4558,6 +4558,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &837671866 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1162716139844818, guid: 396aaa552529c2f459db379eb5e0e3b8,
+    type: 2}
+  m_PrefabInternal: {fileID: 2108227543}
 --- !u!1 &840462367
 GameObject:
   m_ObjectHideFlags: 0
@@ -4817,15 +4822,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4567308173017440, guid: 94233aaeb04b41c419f4fbe1a7182e5b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -38.63
+      value: -39.8
       objectReference: {fileID: 0}
     - target: {fileID: 4567308173017440, guid: 94233aaeb04b41c419f4fbe1a7182e5b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 13.96
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4567308173017440, guid: 94233aaeb04b41c419f4fbe1a7182e5b, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -51.42
+      value: -51.5
       objectReference: {fileID: 0}
     - target: {fileID: 4567308173017440, guid: 94233aaeb04b41c419f4fbe1a7182e5b, type: 2}
       propertyPath: m_LocalRotation.x
@@ -4856,10 +4861,10 @@ Prefab:
         type: 2}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 837671866}
     - target: {fileID: 1174554996177844, guid: 94233aaeb04b41c419f4fbe1a7182e5b, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 20282128002738496, guid: 94233aaeb04b41c419f4fbe1a7182e5b,
         type: 2}
@@ -11374,11 +11379,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4465710028814056, guid: 396aaa552529c2f459db379eb5e0e3b8, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.7508
+      value: 2.7907999
       objectReference: {fileID: 0}
     - target: {fileID: 4465710028814056, guid: 396aaa552529c2f459db379eb5e0e3b8, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 11.72
+      value: -51.559998
       objectReference: {fileID: 0}
     - target: {fileID: 4465710028814056, guid: 396aaa552529c2f459db379eb5e0e3b8, type: 2}
       propertyPath: m_LocalRotation.x
@@ -11409,6 +11414,10 @@ Prefab:
         type: 2}
       propertyPath: InitialModule.startLifetime.scalar
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1162716139844818, guid: 396aaa552529c2f459db379eb5e0e3b8, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 396aaa552529c2f459db379eb5e0e3b8, type: 2}
