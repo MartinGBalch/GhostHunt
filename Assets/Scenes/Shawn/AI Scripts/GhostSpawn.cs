@@ -22,6 +22,7 @@ public class GhostSpawn : MonoBehaviour
             Vector3 location = new Vector3(Random.Range(minX,maxX), transform.position.y, Random.Range(minZ, maxZ));
             Instantiate(Ghost, location, Quaternion.identity);
             Ghost.GetComponent<GhostDeath>().GhostSpawner = gameObject;
+            Ghost.GetComponent<GhostDamage>().GhostSpawner = gameObject;
             ++totalGhosts;
         }
 	}
@@ -37,6 +38,7 @@ public class GhostSpawn : MonoBehaviour
                 Vector3 location = new Vector3(Random.Range(minX, maxX), transform.position.y, Random.Range(minZ, maxZ));
                 Instantiate(Ghost, location, Quaternion.identity);
                 Ghost.GetComponent<GhostDeath>().GhostSpawner = gameObject;
+                Ghost.GetComponent<GhostDamage>().GhostSpawner = gameObject;
                 ++totalGhosts;
             }
 
