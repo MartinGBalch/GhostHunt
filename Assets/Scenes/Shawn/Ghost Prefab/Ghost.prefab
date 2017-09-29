@@ -338,7 +338,7 @@ MonoBehaviour:
   GhostSpawner: {fileID: 0}
   Soul: {fileID: 1219972017194376, guid: e912df23d4d40f444ac56a9f3e5c5f18, type: 2}
   glow: {fileID: 1963635836874314}
-  deathTimer: 0.75
+  deathTimer: 0.5
   isAlive: 1
   dieTest: 0
 --- !u!114 &114674702118713760
