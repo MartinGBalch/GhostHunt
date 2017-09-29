@@ -35,6 +35,7 @@ public class GhostDeath : MonoBehaviour, Ikillable
             isAlive = false;
             GetComponent<Renderer>().enabled = false;
             GetComponent<Collider>().enabled = false;
+            GetComponentInChildren<ParticleSystem>().gameObject.SetActive(false);
             glow.gameObject.SetActive(false);
             deathPosition = transform.position;
             Instantiate(death, transform.position, Quaternion.identity);           
