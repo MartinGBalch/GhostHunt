@@ -98,6 +98,7 @@
     <Compile Include="Assets\Kobey\PlayerPrefabs\SoulCarrier.cs" />
     <Compile Include="Assets\Martin\Scripts\Timer.cs" />
     <Compile Include="Assets\Martin\Scripts\UI.cs" />
+    <Compile Include="Assets\Martin\Scripts\WinState.cs" />
     <Compile Include="Assets\Scenes\Shawn\AI Scripts\GhostAI.cs" />
     <Compile Include="Assets\Scenes\Shawn\AI Scripts\GhostDamage.cs" />
     <Compile Include="Assets\Scenes\Shawn\AI Scripts\GhostDeath.cs" />
