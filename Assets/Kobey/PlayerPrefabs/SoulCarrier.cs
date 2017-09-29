@@ -41,6 +41,7 @@ public class SoulCarrier : MonoBehaviour {
             var babySoul = Soul;
             babySoul.transform.position = transform.position;
             babySoul.GetComponent<SoulCollision>().soulAmount = carriedSouls;
+            babySoul.GetComponent<SoulCollision>().CollisionDelay = 1.3f;
             carriedSouls = 0;
             UpdateLight();
             Instantiate(babySoul);

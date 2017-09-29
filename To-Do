@@ -8,6 +8,8 @@ Kobey
 	-Player is on its own layer
 	-Player meshes dont send shadows
 
+-Rotate the rotation vector not the object
+
 
 Shawn
 -Implement IkillableInterface
