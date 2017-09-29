@@ -13,15 +13,22 @@ public class GhostShotGun : MonoBehaviour {
     public string playerNumber;
     public ParticleSystem Pellet;
     AudioSource sounds;
-    public Quaternion startRot;
+    Quaternion startRot;
+   
     // Use this for initialization
     void Start()
     {
+
+        
+
+
         sounds = GetComponent<AudioSource>();
         initRotate = (arcDegree * lineCount) / 2;
         transform.Rotate(0, -initRotate, 0);
+
         startReload = reloadTime;
         reloadTime = 0;
+        
     }
 
     void Shoot()
@@ -31,13 +38,15 @@ public class GhostShotGun : MonoBehaviour {
         startRot = transform.rotation;
         for (int i = 0; i < lineCount; i++)
         {
+            
+            transform.Rotate(0, arcDegree * i, 0);
             Vector3 start = transform.position;
             Vector3 End = (transform.forward);
             RaycastHit sphereHit;
             RaycastHit hitInfo;
-            if(Physics.SphereCast(start,3, transform.forward,out sphereHit))
+            if (Physics.SphereCast(start, 0.5f, transform.forward, out sphereHit))
             {
-                if(sphereHit.collider.tag != "GhostWALL")
+                if (sphereHit.collider.tag != "GhostWALL")
                 {
                     if (Physics.Raycast(start, End, out hitInfo, distance))
                     {
@@ -50,21 +59,22 @@ public class GhostShotGun : MonoBehaviour {
                             break;
                             //Destroy(hitInfo.collider.gameObject);
                         }
-                       
+
 
                     }
                 }
             }
-            
+
 
 
 
             Debug.DrawLine(start, (start + (End * distance)));
-            transform.Rotate(0, arcDegree, 0);
+            transform.rotation = startRot;
         }
         transform.rotation = startRot;
-        Debug.Log(startRot);
     }
+
+
 
     // Update is called once per frame
     void Update()
@@ -77,5 +87,7 @@ public class GhostShotGun : MonoBehaviour {
             Shoot();
             reloadTime = startReload;
         }
+
+        
     }
 }

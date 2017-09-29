@@ -10,11 +10,14 @@ public class Movement : MonoBehaviour {
     public string PlayerNumber;
     public float rollForce;
     Animator anim;
+    private float normalSpeed;
+    public float sprintSpeed;
     // Use this for initialization
     void Start ()
     {
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
+        normalSpeed = speed;
 	}
 	
 	// Update is called once per frame
@@ -30,11 +33,11 @@ public class Movement : MonoBehaviour {
         anim.SetFloat("Horz", horz);
         anim.SetFloat("Vert", vert);
 
-        //if(Input.GetButton("Xbutton" + PlayerNumber))
-        //{
-        //    anim.SetTrigger("Roll");
-        //    rb.AddForce(rb.velocity * rollForce);
-        //}
+        if(Input.GetButton("Bbutton" + PlayerNumber))
+        {
+            speed = sprintSpeed;
+        }
+        else { speed = normalSpeed; }
 
         rb.velocity = new Vector3(-horz * speed, 0, vert * speed);
 

@@ -24,8 +24,8 @@ public class ShotgunSpread : MonoBehaviour {
        //shotgunBlast = GetComponent<AudioSource>();
         sounds = GetComponents<AudioSource>();
         Kills = 0;
-        initRotate = (arcDegree * lineCount) / 2;
-        transform.Rotate(0, -initRotate, 0);
+        //initRotate = (arcDegree * lineCount) / 2;
+        //transform.Rotate(0, -initRotate, 0);
         startReload = reloadTime;
         reloadTime = 0;
 	}
@@ -37,19 +37,24 @@ public class ShotgunSpread : MonoBehaviour {
         sounds[0].Play();
         Pellet.Play();
         startRot = transform.rotation;
+        Vector3 start = transform.position;
+        
         for (int i = 0; i < lineCount; i++)
         {
-            Vector3 start = transform.position;
+            transform.Rotate(0, arcDegree * i, 0);
+
+
             Vector3 End = (transform.forward );
             RaycastHit sphereHit;
             RaycastHit hitInfo;
             Debug.DrawLine(start, (start + (End * distance)));
-            if (Physics.SphereCast(start, 3, transform.forward, out sphereHit))
+            if (Physics.SphereCast(start, 0.5f, transform.forward, out sphereHit))
             {
                 if(sphereHit.collider.tag != "GhostWall")
                 {
                     if (Physics.Raycast(start, End, out hitInfo, distance))
                     {
+                       
                         if (hitInfo.collider.tag == "Test")
                         {
                             Debug.Log("SHOTGUN");
@@ -65,7 +70,7 @@ public class ShotgunSpread : MonoBehaviour {
                 }
             }
 
-            
+
 
             //var LineBaby = line;
             //LineBaby.transform.position = transform.position;
@@ -73,8 +78,8 @@ public class ShotgunSpread : MonoBehaviour {
             //LineBaby.SetPosition(1, (start+(End * (distance/2))));
             //Instantiate(LineBaby);
             //Destroy(LineBaby, .5f);
-            
-            transform.Rotate(0, arcDegree, 0);
+            //startRot.SetLookRotation(transform.rotation + * i));
+            transform.rotation = startRot;
         }
         transform.rotation = startRot;
         anim.SetTrigger("Reloading");
