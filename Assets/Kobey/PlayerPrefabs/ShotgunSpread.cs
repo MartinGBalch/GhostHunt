@@ -18,6 +18,7 @@ public class ShotgunSpread : MonoBehaviour {
     AudioSource[] sounds;
     //public LineRenderer line;
     // Use this for initialization
+    public Quaternion startRot;
     void Start ()
     {
        //shotgunBlast = GetComponent<AudioSource>();
@@ -35,7 +36,7 @@ public class ShotgunSpread : MonoBehaviour {
     {
         sounds[0].Play();
         Pellet.Play();
-        Quaternion startRot = transform.rotation;
+        startRot = transform.rotation;
         for (int i = 0; i < lineCount; i++)
         {
             Vector3 start = transform.position;
@@ -57,7 +58,7 @@ public class ShotgunSpread : MonoBehaviour {
                                 Kills++;
                             }
                             hitInfo.collider.GetComponent<Ikillable>().Die();
-                            return;
+                            
                             // Destroy(hitInfo.collider.gameObject);
                         }
                     }

@@ -13,6 +13,7 @@ public class GhostShotGun : MonoBehaviour {
     public string playerNumber;
     public ParticleSystem Pellet;
     AudioSource sounds;
+    public Quaternion startRot;
     // Use this for initialization
     void Start()
     {
@@ -27,7 +28,7 @@ public class GhostShotGun : MonoBehaviour {
     {
         Pellet.Play();
         sounds.Play();
-        Quaternion startRot = transform.rotation;
+        startRot = transform.rotation;
         for (int i = 0; i < lineCount; i++)
         {
             Vector3 start = transform.position;
@@ -46,7 +47,7 @@ public class GhostShotGun : MonoBehaviour {
                         {
                             Debug.Log("Ghost");
                             hitInfo.collider.GetComponent<Ikillable>().Die();
-                            return;
+                            break;
                             //Destroy(hitInfo.collider.gameObject);
                         }
                        
@@ -62,6 +63,7 @@ public class GhostShotGun : MonoBehaviour {
             transform.Rotate(0, arcDegree, 0);
         }
         transform.rotation = startRot;
+        Debug.Log(startRot);
     }
 
     // Update is called once per frame
