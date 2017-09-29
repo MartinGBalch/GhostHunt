@@ -6,7 +6,7 @@ public class GhostDeath : MonoBehaviour, Ikillable
 {
     public GameObject GhostSpawner;
     public GameObject Soul;
-    bool isAlive = true;
+    public bool isAlive = true;
     public bool dieTest = false;
 
 	void Update ()
