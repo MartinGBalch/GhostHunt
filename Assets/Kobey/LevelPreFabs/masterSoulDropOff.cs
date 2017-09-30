@@ -9,6 +9,9 @@ public class masterSoulDropOff : MonoBehaviour {
     public int P3storedSouls;
     public int P4storedSouls;
 
+    public Timer time;
+    public WinState[] winStates;
+
     // Use this for initialization
     void Start()
     {
@@ -54,9 +57,28 @@ public class masterSoulDropOff : MonoBehaviour {
         }
     }
 
+    void CalculateWinner()
+    {
+        int highestScore = Mathf.Max(P1storedSouls, P2storedSouls, P3storedSouls, P4storedSouls);
+        
+        winStates[0].score = P1storedSouls;
+        winStates[1].score = P2storedSouls;
+        winStates[2].score = P3storedSouls;
+        winStates[3].score = P4storedSouls;
+
+        for (int i = 0; i < 4; i++)
+        {
+            winStates[i].HighestScore = highestScore;
+            winStates[i].GameOver();
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
-
+        if(time.time < 0)
+        {
+            CalculateWinner();
+        }
     }
 }

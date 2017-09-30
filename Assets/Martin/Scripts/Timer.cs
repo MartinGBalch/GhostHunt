@@ -20,9 +20,13 @@ public class Timer : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        time -= Time.deltaTime;
-        Min = (int)time / 60;
-        Sec = (int)time%60;
+        if(time >= 0)
+        {
+            time -= Time.deltaTime;
+            Min = (int)time / 60;
+            Sec = (int)time % 60;
+        }
+       
         GameTime();
 
     }
