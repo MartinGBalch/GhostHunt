@@ -5,9 +5,9 @@ using UnityEngine;
 public class ShotgunSpread : MonoBehaviour {
 
     public float distance;
-    public float arcDegree;
+    //public float arcDegree;
     public float lineCount;
-    private float initRotate;
+   // private float initRotate;
     public float reloadTime;
     private float startReload;
     public string playerNumber;
@@ -41,15 +41,16 @@ public class ShotgunSpread : MonoBehaviour {
         {
             sounds[0].Play();
             Pellet.Play();
-            startRot = transform.rotation;
+           // startRot = transform.rotation;
             Vector3 start = transform.position;
 
             for (int i = 0; i < lineCount; i++)
             {
-                transform.Rotate(0, arcDegree * i, 0);
+                //transform.Rotate(0, arcDegree * i, 0);
+                float x = Random.Range(-0.5f, 0.5f);
+                float z = Random.Range(-0.5f, 0.5f);
 
-
-                Vector3 End = (transform.forward);
+                Vector3 End = new Vector3(transform.forward.x + x, transform.forward.y, transform.forward.z + z);
                 RaycastHit sphereHit;
                 RaycastHit hitInfo;
                 Debug.DrawLine(start, (start + (End * distance)));
@@ -84,9 +85,9 @@ public class ShotgunSpread : MonoBehaviour {
                 //Instantiate(LineBaby);
                 //Destroy(LineBaby, .5f);
                 //startRot.SetLookRotation(transform.rotation + * i));
-                transform.rotation = startRot;
+               // transform.rotation = startRot;
             }
-            transform.rotation = startRot;
+           // transform.rotation = startRot;
             anim.SetTrigger("Reloading");
             sounds[1].PlayDelayed(1);
         }

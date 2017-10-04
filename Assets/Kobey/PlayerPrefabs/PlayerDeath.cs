@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class PlayerDeath : MonoBehaviour, Ikillable {
 
     // Use this for initialization
@@ -14,7 +14,7 @@ public class PlayerDeath : MonoBehaviour, Ikillable {
     Animator anim;
     public int Deaths;
     public bool IsAlive = true;
-    
+    public Text deathText;
     void Start ()
     {
         carrier = GetComponent<SoulCarrier>();
@@ -31,7 +31,8 @@ public class PlayerDeath : MonoBehaviour, Ikillable {
     void ReSpawn()
     {
         transform.position = startLocation;
-        Respawning = true;
+        deathText.text = "Dead.";
+        
         Debug.Log("Spawned");
     }
 
@@ -44,6 +45,7 @@ public class PlayerDeath : MonoBehaviour, Ikillable {
             IsAlive = false;
             anim.SetTrigger("Death");
             Invoke("ReSpawn", 1);
+            Respawning = true;
             //ReSpawn();
         }
     }
@@ -57,7 +59,7 @@ public class PlayerDeath : MonoBehaviour, Ikillable {
             RespawnTime -= Time.deltaTime;
             if(RespawnTime <= 0)
             {
-                
+                deathText.text = "";
                 IsAlive = true;
                 Respawning = false;
                 movement.enabled = true;

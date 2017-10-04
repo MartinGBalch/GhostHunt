@@ -9,7 +9,8 @@ Kobey
 	-Player meshes dont send shadows
 
 -Rotate the rotation vector not the object
-
+-FIX THE GUN
+-DEATH/REPSAWN
 
 Shawn
 -Implement IkillableInterface
@@ -17,21 +18,26 @@ Shawn
 	-Drops a soul
 -Have ghost steal souls from players on collision
 	-GetComponent<SoulCarrier>()
-
+-More ghosts
 
 Martin
 -Fix up map
--Implement UI elements for score/Reloading
--Add borders for the cameras
 -Add skybox
- 
-
+-Restart Button
+-Main Menu
+-Death Notification
 
 
 Playtesting:
 -Too many ghosts <Fixed>
 -Ghost camp players
 -souls are too bright <Fixed>
--Too many souls <Fixed>
--Aiming sucks, particles feel like shit
+-Too many souls
+-particles feel like shit
 -Too Dark
+-Center characters more
+-less ghosts, In a main area
+
+
+-Brighter Spotlight
+-
