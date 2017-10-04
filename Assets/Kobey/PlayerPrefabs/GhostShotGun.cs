@@ -5,9 +5,9 @@ using UnityEngine;
 public class GhostShotGun : MonoBehaviour {
 
     public float distance;
-    public float arcDegree;
+    //public float arcDegree;
     public float lineCount;
-    private float initRotate;
+   // private float initRotate;
     public float reloadTime;
     private float startReload;
     public string playerNumber;
@@ -23,8 +23,8 @@ public class GhostShotGun : MonoBehaviour {
 
 
         sounds = GetComponent<AudioSource>();
-        initRotate = (arcDegree * lineCount) / 2;
-        transform.Rotate(0, -initRotate, 0);
+        //initRotate = (arcDegree * lineCount) / 2;
+        //transform.Rotate(0, -initRotate, 0);
 
         startReload = reloadTime;
         reloadTime = 0;
@@ -35,13 +35,16 @@ public class GhostShotGun : MonoBehaviour {
     {
         Pellet.Play();
         sounds.Play();
-        startRot = transform.rotation;
+        //startRot = transform.rotation;
         for (int i = 0; i < lineCount; i++)
         {
-            
-            transform.Rotate(0, arcDegree * i, 0);
+            float x = Random.Range(-0.5f, 0.5f);
+            float z = Random.Range(-0.5f, 0.5f);
+
+            Vector3 End = new Vector3(transform.forward.x + x, transform.forward.y, transform.forward.z + z);
+            // transform.Rotate(0, arcDegree * i, 0);
             Vector3 start = transform.position;
-            Vector3 End = (transform.forward);
+            //Vector3 End = (transform.forward);
             RaycastHit sphereHit;
             RaycastHit hitInfo;
             if (Physics.SphereCast(start, 0.5f, transform.forward, out sphereHit))
@@ -69,9 +72,9 @@ public class GhostShotGun : MonoBehaviour {
 
 
             Debug.DrawLine(start, (start + (End * distance)));
-            transform.rotation = startRot;
+            //transform.rotation = startRot;
         }
-        transform.rotation = startRot;
+       // transform.rotation = startRot;
     }
 
 

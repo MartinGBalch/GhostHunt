@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -25,6 +26,13 @@ public class Timer : MonoBehaviour
             time -= Time.deltaTime;
             Min = (int)time / 60;
             Sec = (int)time % 60;
+        }
+        else
+        {
+            if(Input.GetKey(KeyCode.Escape))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
         }
        
         GameTime();
