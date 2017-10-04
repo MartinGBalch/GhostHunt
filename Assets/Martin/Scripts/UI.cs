@@ -40,6 +40,10 @@ public class UI : MonoBehaviour
             Counter.color = maxSoul;
             Debug.Log("working");
         }
+        else
+        {
+            Counter.color = Color.white;
+        }
     }
 
    

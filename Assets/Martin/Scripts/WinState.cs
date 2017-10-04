@@ -15,21 +15,21 @@ public class WinState : MonoBehaviour
     {
         Win = GetComponent<Text>();
         Lose = GetComponent<Text>();
-        GameOver();
+        //GameOver();
 	}
 	
 	// Update is called once per frame
 	void Update () {}
 
-    void GameOver()
+    public void GameOver()
     {
         if (score == HighestScore)
         {
-            Win.text = "You Win";
+            Win.text = "You Win" + "\n" + score;
         }
         else
         {
-            Lose.text = "You Lose";
+            Lose.text = "You Lose" + "\n" + score;
             Lose.color = LoseColor;
         }
             

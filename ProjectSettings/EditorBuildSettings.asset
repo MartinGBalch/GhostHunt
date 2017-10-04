@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/Martin.unity
+    guid: 25eafd0723741ee4b922ada778650049
+  - enabled: 1
+    path: Assets/Scenes/kobeyPre-Build.unity
+    guid: 20de899dfe8df5b4fb55b713c3611c72

@@ -45,7 +45,8 @@ public class GhostDeath : MonoBehaviour, Ikillable
     void SpawnSoul()
     {
         --GhostSpawner.GetComponent<GhostSpawn>().totalGhosts;
-        Instantiate(Soul, deathPosition, Quaternion.identity);
+        var spawnBaby = Soul;
+        Instantiate(spawnBaby, deathPosition, Quaternion.identity);
         Destroy(death);
         Destroy(gameObject);
     }

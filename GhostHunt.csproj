@@ -67,6 +67,7 @@
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>Library\UnityAssemblies\UnityEngine.HoloLens.dll</HintPath>
     </Reference>
+<<<<<<< HEAD
     <Reference Include="UnityEngine.VR">
       <HintPath>Library\UnityAssemblies\UnityEngine.VR.dll</HintPath>
     </Reference>
@@ -79,11 +80,14 @@
     <Reference Include="UnityEditor.iOS.Extensions.Common">
       <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
+=======
+>>>>>>> master
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Interfaces.cs" />
     <Compile Include="Assets\JMO Assets\MatCap Shaders\Demo\Assets\MC_AutoRotate.cs" />
     <Compile Include="Assets\JMO Assets\MatCap Shaders\Demo\Assets\MC_SwitchTexture.cs" />
+    <Compile Include="Assets\Kobey\LevelPreFabs\masterSoulDropOff.cs" />
     <Compile Include="Assets\Kobey\LevelPreFabs\SoulCollision.cs" />
     <Compile Include="Assets\Kobey\LevelPreFabs\SoulDropOff.cs" />
     <Compile Include="Assets\Kobey\PlayerPrefabs\CameraFollow.cs" />

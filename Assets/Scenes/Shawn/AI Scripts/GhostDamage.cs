@@ -34,7 +34,7 @@ public class GhostDamage : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        if(other.gameObject.tag == "Test")
+        if(other.gameObject.tag == "Test" && GetComponent<GhostDeath>().isAlive)
         {
             if(other.gameObject.GetComponent<SoulCarrier>().carriedSouls > 0)
                 other.gameObject.GetComponent<SoulCarrier>().carriedSouls -= amount;

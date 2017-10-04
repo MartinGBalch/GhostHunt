@@ -15,7 +15,7 @@ public class SoulCollision : MonoBehaviour {
             var soulCarrier = other.GetComponent<SoulCarrier>();
             if(soulCarrier.carriedSouls < soulCarrier.maxSoulCount)
             {
-                soulCarrier.carriedSouls++;
+                soulCarrier.carriedSouls += soulAmount;
                 soulCarrier.UpdateLight();
                 Destroy(gameObject);
             }
