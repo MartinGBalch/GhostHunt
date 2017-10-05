@@ -6,7 +6,7 @@ public class BreakPumpkin : MonoBehaviour, Ikillable
 {
     Animator anim;
     Collider coll;
-    bool isAlive;
+    bool isAlive = true;
 	
 	void Start ()
     {
