@@ -76,7 +76,7 @@ public class GhostShotGun : MonoBehaviour {
 
                         if (hitInfo.collider.tag == "Ghost")
                         {
-                            Debug.Log("Ghost");
+                            Debug.Log("Hit Ghost");
                             hitInfo.collider.GetComponent<Ikillable>().Die();
                             //break;
 
@@ -101,18 +101,7 @@ public class GhostShotGun : MonoBehaviour {
 
         reloadTime -= Time.deltaTime;
         float Trigger = state.Triggers.Left;
-        //if(!isHeld && Trigger == 1)
-        //{
-        //    isHeld = true;
-        //}
-        //if(isHeld && Trigger <= .9f)
-        //{
-        //    isHeld = false;
-        //}
-        //if(isHeld && !shoot)
-        //{
-        //    shoot = true;
-        //}
+       
 
         
         if(prevState.Triggers.Left == 1)
