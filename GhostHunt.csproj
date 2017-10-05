@@ -82,9 +82,12 @@
     <Reference Include="UnityEditor.iOS.Extensions.Common">
       <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
+<<<<<<< HEAD
     <Reference Include="XInputDotNetPure">
       <HintPath>Assets\Kobey\XInputDotNet\Plugins\XInputDotNetPure.dll</HintPath>
     </Reference>
+=======
+>>>>>>> Martin
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Interfaces.cs" />
@@ -98,7 +101,12 @@
     <Compile Include="Assets\Kobey\PlayerPrefabs\PlayerDeath.cs" />
     <Compile Include="Assets\Kobey\PlayerPrefabs\ShotgunSpread.cs" />
     <Compile Include="Assets\Kobey\PlayerPrefabs\SoulCarrier.cs" />
+<<<<<<< HEAD
     <Compile Include="Assets\Kobey\XInputDotNet\Examples\XInputTestCS.cs" />
+=======
+    <Compile Include="Assets\Martin\Scripts\HowToManager.cs" />
+    <Compile Include="Assets\Martin\Scripts\Menu.cs" />
+>>>>>>> Martin
     <Compile Include="Assets\Martin\Scripts\Timer.cs" />
     <Compile Include="Assets\Martin\Scripts\UI.cs" />
     <Compile Include="Assets\Martin\Scripts\WinState.cs" />

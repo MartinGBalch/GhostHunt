@@ -130,8 +130,13 @@
     <Reference Include="UnityEditor.iOS.Extensions.Common">
       <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
+<<<<<<< HEAD
     <Reference Include="XInputDotNetPure">
       <HintPath>Assets\Kobey\XInputDotNet\Plugins\XInputDotNetPure.dll</HintPath>
+=======
+    <Reference Include="JMOAssets">
+      <HintPath>Assets\JMO Assets\Editor\JMOAssets.dll</HintPath>
+>>>>>>> Martin
     </Reference>
     <Reference Include="JMOAssets_MatCapWelcome">
       <HintPath>Assets\Scenes\Shawn\JMO Assets\Editor\JMOAssets_MatCapWelcome.dll</HintPath>
