@@ -11,7 +11,6 @@ public class XInputTestCS : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        
         // No need to initialize anything for the plugin
     }
 
@@ -44,13 +43,6 @@ public class XInputTestCS : MonoBehaviour
 
         prevState = state;
         state = GamePad.GetState(playerIndex);
-
-        GamePadState q = GamePad.GetState(PlayerIndex.Two);
-
-        if(q.Buttons.A == ButtonState.Pressed && q.Buttons.A == ButtonState.Released)
-        {
-            Debug.Log("Player 2 hit A");
-        }
 
         // Detect if a button was pressed this frame
         if (prevState.Buttons.A == ButtonState.Released && state.Buttons.A == ButtonState.Pressed)

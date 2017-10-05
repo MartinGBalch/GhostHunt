@@ -313,8 +313,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5007e69f5f1e92041b99abd76028af7d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.2
+  m_Pitch: 2.4
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -398,8 +398,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5007e69f5f1e92041b99abd76028af7d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.2
+  m_Pitch: 2.4
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -936,7 +936,7 @@ GameObject:
   - component: {fileID: 897675613}
   - component: {fileID: 897675612}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GhostSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -969,7 +969,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 897675611}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.3, y: 4.5, z: -18.415}
+  m_LocalPosition: {x: -7.3, y: 4, z: -18.415}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1048,6 +1048,11 @@ Prefab:
         type: 2}
       propertyPath: lineCount
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 82145113481217528, guid: 16dd215db584a0444ac2615868fe1cea,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.326
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 16dd215db584a0444ac2615868fe1cea, type: 2}
@@ -1237,8 +1242,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5007e69f5f1e92041b99abd76028af7d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.2
+  m_Pitch: 2.4
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -1587,6 +1592,11 @@ Prefab:
       propertyPath: lineCount
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 82994699217815060, guid: c3bb4293fa53f1f4a908dd2a59fe164b,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.326
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c3bb4293fa53f1f4a908dd2a59fe164b, type: 2}
   m_IsPrefabParent: 0
@@ -1644,8 +1654,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5007e69f5f1e92041b99abd76028af7d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.2
+  m_Pitch: 2.4
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -1952,6 +1962,11 @@ Prefab:
       propertyPath: lineCount
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 82276936371686374, guid: 396aaa552529c2f459db379eb5e0e3b8,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.326
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 396aaa552529c2f459db379eb5e0e3b8, type: 2}
   m_IsPrefabParent: 0
@@ -2044,6 +2059,11 @@ Prefab:
     - target: {fileID: 4365085950793554, guid: d3675cbf017ecfc4eba1cd0f14d8c6c5, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0.587
+      objectReference: {fileID: 0}
+    - target: {fileID: 82183536662511474, guid: d3675cbf017ecfc4eba1cd0f14d8c6c5,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.326
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d3675cbf017ecfc4eba1cd0f14d8c6c5, type: 2}
