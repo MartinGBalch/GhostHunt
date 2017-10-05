@@ -5,9 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 768003e40d3cf7a4d8e1f372ae7c72ab
+  - enabled: 1
     path: Assets/Scenes/Martin.unity
     guid: 25eafd0723741ee4b922ada778650049
   - enabled: 1
+    path: Assets/Scenes/FinalGame.unity
+    guid: bf5721d92774cfa4cbee5ec1f82fca8d
+  - enabled: 0
     path: Assets/Scenes/kobeyPre-Build.unity
     guid: 20de899dfe8df5b4fb55b713c3611c72
+  - enabled: 0
+    path: Assets/Scenes/Shawn Level.unity
+    guid: 9649adb134a47e1468c87f97b7c0f734
