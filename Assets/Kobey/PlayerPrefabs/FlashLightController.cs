@@ -1,18 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using XInputDotNetPure;
 public class FlashLightController : MonoBehaviour {
 
+
+    PlayerIndex pIdx;
+    GamePadState state;
+    GamePadState prevState;
+
     new Light light;
-    //Light light;
+    
     private float startIntensity;
     public bool isOn = true;
-    public string PlayerNum;
+    public int PlayerNum;
     public bool press;
 	// Use this for initialization
-	void Start () {
-        
+	void Start ()
+    {
+        switch (PlayerNum)
+        {
+            case 1:
+                pIdx = PlayerIndex.One;
+                break;
+            case 2:
+                pIdx = PlayerIndex.Two;
+                break;
+            case 3:
+                pIdx = PlayerIndex.Three;
+                break;
+            case 4:
+                pIdx = PlayerIndex.Four;
+                break;
+        }
         light = gameObject.GetComponent<Light>();
         if (light != null) { Debug.Log("Light attacjed"); }
         startIntensity = light.intensity;
@@ -23,22 +43,26 @@ public class FlashLightController : MonoBehaviour {
         if(isOn)
         {
             light.intensity = startIntensity;
-            //Debug.Log("Light On");
+           
             
         }
         else
         {
-           // Debug.Log("Light Off");
+           
             light.intensity = 0;
         }
     }
 	// Update is called once per frame
 	void Update ()
     {
-        press = Input.GetButtonDown("Xbutton" + PlayerNum);
-        if (press)
+        prevState = state;
+        state = GamePad.GetState(pIdx);
+
+
+       
+        if (state.Buttons.RightShoulder == ButtonState.Released && prevState.Buttons.RightShoulder == ButtonState.Pressed)
         {
-            Debug.Log("Attempt Switch on player " + PlayerNum);
+           
             isOn = !isOn;
             Switchlight();
         }

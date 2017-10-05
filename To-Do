@@ -9,8 +9,10 @@ Kobey
 	-Player meshes dont send shadows
 
 -Rotate the rotation vector not the object
--FIX THE GUN
+-FIX THE GUN range
+-Xinput
 -DEATH/REPSAWN
+
 
 Shawn
 -Implement IkillableInterface
