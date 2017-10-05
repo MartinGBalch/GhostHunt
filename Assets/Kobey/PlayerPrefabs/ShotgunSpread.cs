@@ -67,8 +67,8 @@ public class ShotgunSpread : MonoBehaviour {
             for (int i = 0; i < lineCount; i++)
             {
                
-                float x = Random.Range(-0.3f, 0.8f);
-                float z = Random.Range(-0.3f, 0.8f);
+                float x = Random.Range(-0.4f, 0.6f);
+                float z = Random.Range(-0.4f, 0.6f);
 
                 Vector3 End = new Vector3(transform.forward.x + x, transform.forward.y, transform.forward.z + z);
                 RaycastHit sphereHit;
