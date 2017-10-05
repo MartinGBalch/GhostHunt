@@ -1,16 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using XInputDotNetPure;
 
 public class GhostShotGun : MonoBehaviour {
 
+    PlayerIndex pIdx;
+    GamePadState state;
+    GamePadState prevState;
+
+
     public float distance;
-    //public float arcDegree;
+    
     public float lineCount;
-   // private float initRotate;
+   
     public float reloadTime;
     private float startReload;
-    public string playerNumber;
+    public int playerNumber;
     public ParticleSystem Pellet;
     AudioSource sounds;
     Quaternion startRot;
@@ -18,13 +24,26 @@ public class GhostShotGun : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        switch (playerNumber)
+        {
+            case 1:
+                pIdx = PlayerIndex.One;
+                break;
+            case 2:
+                pIdx = PlayerIndex.Two;
+                break;
+            case 3:
+                pIdx = PlayerIndex.Three;
+                break;
+            case 4:
+                pIdx = PlayerIndex.Four;
+                break;
+        }
 
-        
 
 
         sounds = GetComponent<AudioSource>();
-        //initRotate = (arcDegree * lineCount) / 2;
-        //transform.Rotate(0, -initRotate, 0);
+        
 
         startReload = reloadTime;
         reloadTime = 0;
@@ -35,16 +54,16 @@ public class GhostShotGun : MonoBehaviour {
     {
         Pellet.Play();
         sounds.Play();
-        //startRot = transform.rotation;
+       
         for (int i = 0; i < lineCount; i++)
         {
             float x = Random.Range(-0.5f, 0.5f);
             float z = Random.Range(-0.5f, 0.5f);
 
             Vector3 End = new Vector3(transform.forward.x + x, transform.forward.y, transform.forward.z + z);
-            // transform.Rotate(0, arcDegree * i, 0);
+           
             Vector3 start = transform.position;
-            //Vector3 End = (transform.forward);
+           
             RaycastHit sphereHit;
             RaycastHit hitInfo;
             if (Physics.SphereCast(start, 0.5f, transform.forward, out sphereHit))
@@ -60,36 +79,57 @@ public class GhostShotGun : MonoBehaviour {
                             Debug.Log("Ghost");
                             hitInfo.collider.GetComponent<Ikillable>().Die();
                             break;
-                            //Destroy(hitInfo.collider.gameObject);
+
                         }
-
-
                     }
                 }
             }
-
-
-
-
             Debug.DrawLine(start, (start + (End * distance)));
-            //transform.rotation = startRot;
         }
-       // transform.rotation = startRot;
+       
     }
 
-
+    bool isHeld = false;
+   
 
     // Update is called once per frame
     void Update()
     {
-        reloadTime -= Time.deltaTime;
-        float Trigger = Input.GetAxis("LeftTrigger" + playerNumber);
+        prevState = state;
+        state = GamePad.GetState(pIdx);
 
-        if (reloadTime <= 0 && Trigger == 1)
+
+        reloadTime -= Time.deltaTime;
+        float Trigger = state.Triggers.Left;
+        //if(!isHeld && Trigger == 1)
+        //{
+        //    isHeld = true;
+        //}
+        //if(isHeld && Trigger <= .9f)
+        //{
+        //    isHeld = false;
+        //}
+        //if(isHeld && !shoot)
+        //{
+        //    shoot = true;
+        //}
+
+        
+        if(prevState.Triggers.Left == 1)
+        {
+            isHeld = true;
+        }
+        else
+        {
+            isHeld = false;
+        }
+        if (reloadTime <= 0 && Trigger == 1 && !isHeld)
         {
             Shoot();
+            isHeld = false;
             reloadTime = startReload;
         }
+        
 
         
     }
