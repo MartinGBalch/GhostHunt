@@ -108,7 +108,7 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
-  m_NavMeshData: {fileID: 23800000, guid: bff9c60f849f28c47bcee8178f9665e3, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 2a9bc9cf40ddbf14eba25c5046864fb2, type: 2}
 --- !u!1 &51620491 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1830067014844764, guid: c3bb4293fa53f1f4a908dd2a59fe164b,
@@ -799,7 +799,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 897675611}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.3, y: 3.351, z: -18.415}
+  m_LocalPosition: {x: -7.3, y: 4.5, z: -18.415}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -849,6 +849,11 @@ Prefab:
       propertyPath: deathText
       value: 
       objectReference: {fileID: 130142403}
+    - target: {fileID: 114653118762345528, guid: 16dd215db584a0444ac2615868fe1cea,
+        type: 2}
+      propertyPath: lineCount
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 16dd215db584a0444ac2615868fe1cea, type: 2}
   m_IsPrefabParent: 0
@@ -1141,7 +1146,7 @@ Prefab:
     - target: {fileID: 108939468818935814, guid: fd315109f1920904792ab6392b143a0f,
         type: 2}
       propertyPath: m_Intensity
-      value: 1.2
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fd315109f1920904792ab6392b143a0f, type: 2}
@@ -1272,6 +1277,11 @@ Prefab:
       propertyPath: deathText
       value: 
       objectReference: {fileID: 97007980}
+    - target: {fileID: 114209544479009648, guid: c3bb4293fa53f1f4a908dd2a59fe164b,
+        type: 2}
+      propertyPath: lineCount
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c3bb4293fa53f1f4a908dd2a59fe164b, type: 2}
   m_IsPrefabParent: 0
@@ -1522,6 +1532,11 @@ Prefab:
       propertyPath: deathText
       value: 
       objectReference: {fileID: 1471121005}
+    - target: {fileID: 114219386440538960, guid: 396aaa552529c2f459db379eb5e0e3b8,
+        type: 2}
+      propertyPath: lineCount
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 396aaa552529c2f459db379eb5e0e3b8, type: 2}
   m_IsPrefabParent: 0
@@ -1569,6 +1584,11 @@ Prefab:
       propertyPath: deathText
       value: 
       objectReference: {fileID: 374853220}
+    - target: {fileID: 114243731155837106, guid: d3675cbf017ecfc4eba1cd0f14d8c6c5,
+        type: 2}
+      propertyPath: lineCount
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d3675cbf017ecfc4eba1cd0f14d8c6c5, type: 2}
   m_IsPrefabParent: 0

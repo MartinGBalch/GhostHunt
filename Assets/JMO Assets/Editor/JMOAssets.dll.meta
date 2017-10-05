@@ -1,29 +1,12 @@
 fileFormatVersion: 2
 guid: cedc53e91a163eb498a6434b79d244de
 PluginImporter:
-<<<<<<< HEAD
-  serializedVersion: 1
-=======
   serializedVersion: 2
->>>>>>> Kobey
   iconMap: {}
   executionOrder: {}
   isPreloaded: 0
   isOverridable: 0
   platformData:
-<<<<<<< HEAD
-    Any:
-      enabled: 0
-      settings: {}
-    Editor:
-      enabled: 1
-      settings:
-        DefaultValueInitialized: true
-    WindowsStoreApps:
-      enabled: 0
-      settings:
-        CPU: AnyCPU
-=======
     data:
       first:
         Any: 
@@ -44,7 +27,6 @@ PluginImporter:
         enabled: 0
         settings:
           CPU: AnyCPU
->>>>>>> Kobey
   userData: 
   assetBundleName: 
   assetBundleVariant: 

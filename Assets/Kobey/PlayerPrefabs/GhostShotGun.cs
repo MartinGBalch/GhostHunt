@@ -57,8 +57,8 @@ public class GhostShotGun : MonoBehaviour {
        
         for (int i = 0; i < lineCount; i++)
         {
-            float x = Random.Range(-0.5f, 0.5f);
-            float z = Random.Range(-0.5f, 0.5f);
+            float x = Random.Range(-0.3f, 0.8f);
+            float z = Random.Range(-0.3f, 0.8f);
 
             Vector3 End = new Vector3(transform.forward.x + x, transform.forward.y, transform.forward.z + z);
            
@@ -78,7 +78,7 @@ public class GhostShotGun : MonoBehaviour {
                         {
                             Debug.Log("Ghost");
                             hitInfo.collider.GetComponent<Ikillable>().Die();
-                            break;
+                            //break;
 
                         }
                     }
