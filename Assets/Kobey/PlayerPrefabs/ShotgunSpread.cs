@@ -81,7 +81,7 @@ public class ShotgunSpread : MonoBehaviour {
                         if (Physics.Raycast(start, End, out hitInfo, distance))
                         {
 
-                            if (hitInfo.collider.tag == "Test")
+                            if (hitInfo.collider.tag == "Test" || hitInfo.collider.tag == "Pumpkin")
                             {
                                 
                                 if (hitInfo.collider.GetComponent<PlayerDeath>().IsAlive == true)
