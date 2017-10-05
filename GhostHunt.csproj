@@ -67,6 +67,7 @@
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>Library\UnityAssemblies\UnityEngine.HoloLens.dll</HintPath>
     </Reference>
+<<<<<<< HEAD
     <Reference Include="UnityEngine.VR">
       <HintPath>Library\UnityAssemblies\UnityEngine.VR.dll</HintPath>
     </Reference>
@@ -78,6 +79,10 @@
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Common">
       <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
+=======
+    <Reference Include="XInputDotNetPure">
+      <HintPath>Assets\Kobey\XInputDotNet\Plugins\XInputDotNetPure.dll</HintPath>
+>>>>>>> f3a84a6255fed67acc234691d6bcbe07f0720fc3
     </Reference>
   </ItemGroup>
   <ItemGroup>

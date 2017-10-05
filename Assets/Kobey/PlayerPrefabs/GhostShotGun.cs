@@ -18,7 +18,7 @@ public class GhostShotGun : MonoBehaviour {
     private float startReload;
     public int playerNumber;
     public ParticleSystem Pellet;
-    AudioSource sounds;
+    AudioSource[] sounds;
     Quaternion startRot;
    
     // Use this for initialization
@@ -42,7 +42,7 @@ public class GhostShotGun : MonoBehaviour {
 
 
 
-        sounds = GetComponent<AudioSource>();
+        sounds = GetComponents<AudioSource>();
         
 
         startReload = reloadTime;
@@ -53,12 +53,12 @@ public class GhostShotGun : MonoBehaviour {
     void Shoot()
     {
         Pellet.Play();
-        sounds.Play();
+        sounds[2].Play();
        
         for (int i = 0; i < lineCount; i++)
         {
-            float x = Random.Range(-0.3f, 0.8f);
-            float z = Random.Range(-0.3f, 0.8f);
+            float x = Random.Range(-0.4f, 0.6f);
+            float z = Random.Range(-0.4f, 0.6f);
 
             Vector3 End = new Vector3(transform.forward.x + x, transform.forward.y, transform.forward.z + z);
            
