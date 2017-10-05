@@ -11,6 +11,8 @@ public class ControllerSelection : MonoBehaviour
     GamePadState state;
     GamePadState prevState;
     public int activeIndex;
+    public bool UpDown;
+    public bool LeftRight;
   
     // Use this for initialization
     void Start ()
@@ -30,18 +32,36 @@ public class ControllerSelection : MonoBehaviour
         prevState = state;
         state = GamePad.GetState(pIdx);
 
-        if(prevState.ThumbSticks.Left.Y == 0 && state.ThumbSticks.Left.Y > 0)
+        if(UpDown)
         {
-            
-            activeIndex--;
-        }
-        if (prevState.ThumbSticks.Left.Y == 0 && state.ThumbSticks.Left.Y < 0)
-        {
-            
-            activeIndex++;
+            if (prevState.ThumbSticks.Left.Y == 0 && state.ThumbSticks.Left.Y > 0)
+            {
+
+                activeIndex--;
+            }
+            if (prevState.ThumbSticks.Left.Y == 0 && state.ThumbSticks.Left.Y < 0)
+            {
+
+                activeIndex++;
+            }
         }
 
-        if (activeIndex == 3)
+        if(LeftRight)
+        {
+            if (prevState.ThumbSticks.Left.X == 0 && state.ThumbSticks.Left.X > 0)
+            {
+
+                activeIndex++;
+            }
+            if (prevState.ThumbSticks.Left.X == 0 && state.ThumbSticks.Left.X < 0)
+            {
+
+                activeIndex--;
+            }
+        }
+       
+
+        if (activeIndex == clickAbles.Length)
         {
             activeIndex = 0;
         }

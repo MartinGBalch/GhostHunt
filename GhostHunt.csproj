@@ -96,6 +96,7 @@
     <Compile Include="Assets\Kobey\PlayerPrefabs\GhostShotGun.cs" />
     <Compile Include="Assets\Kobey\PlayerPrefabs\Movement.cs" />
     <Compile Include="Assets\Kobey\PlayerPrefabs\PlayerDeath.cs" />
+    <Compile Include="Assets\Kobey\PlayerPrefabs\PlayerNumManager.cs" />
     <Compile Include="Assets\Kobey\PlayerPrefabs\ShotgunSpread.cs" />
     <Compile Include="Assets\Kobey\PlayerPrefabs\SoulCarrier.cs" />
     <Compile Include="Assets\Kobey\UXinput\ButtonTest.cs" />
