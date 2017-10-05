@@ -76,6 +76,15 @@
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>Library\UnityAssemblies\UnityEngine.HoloLens.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="XInputDotNetPure">
+      <HintPath>Assets\Kobey\XInputDotNet\Plugins\XInputDotNetPure.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Interfaces.cs" />
@@ -91,6 +100,7 @@
     <Compile Include="Assets\Kobey\PlayerPrefabs\PlayerDeath.cs" />
     <Compile Include="Assets\Kobey\PlayerPrefabs\ShotgunSpread.cs" />
     <Compile Include="Assets\Kobey\PlayerPrefabs\SoulCarrier.cs" />
+    <Compile Include="Assets\Kobey\XInputDotNet\Examples\XInputTestCS.cs" />
     <Compile Include="Assets\Martin\Scripts\Timer.cs" />
     <Compile Include="Assets\Martin\Scripts\UI.cs" />
     <Compile Include="Assets\Martin\Scripts\WinState.cs" />
@@ -136,6 +146,8 @@
     <None Include="Assets\Kobey\Particle Dissolve Shader by Moonflower Carnivore\Shaders\softrim\Particle_softrim_alpha_stretch.shader" />
     <None Include="Assets\Kobey\Particle Dissolve Shader by Moonflower Carnivore\Shaders\unity5\Particle_Softrim_Dissolve_additive.shader" />
     <None Include="Assets\Kobey\Particle Dissolve Shader by Moonflower Carnivore\Shaders\unity5\Particle_Softrim_Dissolve_alpha.shader" />
+    <None Include="Assets\Kobey\XInputDotNet\Docs.txt" />
+    <None Include="Assets\Kobey\XInputDotNet\MITLicense.txt" />
     <None Include="Assets\Models\Materials\Velvet\Velvet.shader" />
     <None Include="Assets\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
   </ItemGroup>
