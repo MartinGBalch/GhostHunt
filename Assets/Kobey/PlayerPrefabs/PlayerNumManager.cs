@@ -14,10 +14,12 @@ public class PlayerNumManager : MonoBehaviour {
     GamePadState p2State;
     GamePadState p3State;
     GamePadState p4State;
-
+    public GameObject P4Image;
+   // CameraFollow P4Cam;
     // Use this for initialization
     void Start()
     {
+        //P4Cam = GetComponent<CameraFollow>();
         p1State = GamePad.GetState(p1);
         p2State = GamePad.GetState(p2);
         p3State = GamePad.GetState(p3);
@@ -43,6 +45,20 @@ public class PlayerNumManager : MonoBehaviour {
         {
             Players[3].SetActive(false);
             Cameras[3].SetActive(false);
+        }
+
+
+        if(p1State.IsConnected && p2State.IsConnected && !p3State.IsConnected && !p4State.IsConnected)
+        {
+            Cameras[0].GetComponent<Camera>().rect = new Rect(0, 0.5f, 1, 0.5f);
+            Cameras[1].GetComponent<Camera>().rect = new Rect(0, 0, 1, 0.5f);
+        }
+        if (p1State.IsConnected && p2State.IsConnected && p3State.IsConnected && !p4State.IsConnected)
+        {
+            //Cameras[2].GetComponent<Camera>().rect = new Rect(0, 0, 1, 0.5f);
+            Cameras[3].SetActive(true);
+            //P4Cam.enabled = false;
+            P4Image.SetActive(true);
         }
 
 
