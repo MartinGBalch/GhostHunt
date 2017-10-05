@@ -10,8 +10,6 @@ public class Menu : MonoBehaviour
     public Button how;
     public Button exit;
 
-    public Button Next;
-    public Button Previous;
     public Button back;
 
     public Canvas Main;
