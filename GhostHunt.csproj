@@ -105,6 +105,7 @@
     <Compile Include="Assets\Scenes\Shawn\AI Scripts\GhostDeath.cs" />
     <Compile Include="Assets\Scenes\Shawn\AI Scripts\GhostSpawn.cs" />
     <Compile Include="Assets\Scenes\Shawn\AI Scripts\GhostView.cs" />
+    <Compile Include="Assets\Scenes\Shawn\AI Scripts\LightFlicker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\JMO Assets\!JMO Assets Readme.txt" />
