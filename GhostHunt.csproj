@@ -102,6 +102,11 @@
     <Compile Include="Assets\Kobey\PlayerPrefabs\ShotgunSpread.cs" />
     <Compile Include="Assets\Kobey\PlayerPrefabs\SoulCarrier.cs" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    <Compile Include="Assets\Kobey\UXinput\ButtonTest.cs" />
+    <Compile Include="Assets\Kobey\UXinput\ControllerSelection.cs" />
+>>>>>>> Kobey
     <Compile Include="Assets\Kobey\XInputDotNet\Examples\XInputTestCS.cs" />
 =======
     <Compile Include="Assets\Martin\Scripts\HowToManager.cs" />
