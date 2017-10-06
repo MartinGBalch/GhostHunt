@@ -1456,6 +1456,21 @@ Prefab:
       propertyPath: endTimer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114939050116282070, guid: cf108c98a7ac51e4891ae7c2ce00ae73,
+        type: 2}
+      propertyPath: GameOver
+      value: 
+      objectReference: {fileID: 1834100979}
+    - target: {fileID: 114602207402334608, guid: cf108c98a7ac51e4891ae7c2ce00ae73,
+        type: 2}
+      propertyPath: GameOver
+      value: 
+      objectReference: {fileID: 1834100979}
+    - target: {fileID: 114995034781025256, guid: cf108c98a7ac51e4891ae7c2ce00ae73,
+        type: 2}
+      propertyPath: GameOver
+      value: 
+      objectReference: {fileID: 1834100979}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf108c98a7ac51e4891ae7c2ce00ae73, type: 2}
   m_IsPrefabParent: 0
@@ -62596,11 +62611,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: aeaafc1937444384a8d393cc1787ef09, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.47
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -62856,6 +62871,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1828635308}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!223 &1834100979 stripped
+Canvas:
+  m_PrefabParentObject: {fileID: 223214284067269850, guid: cf108c98a7ac51e4891ae7c2ce00ae73,
+    type: 2}
+  m_PrefabInternal: {fileID: 73345607}
 --- !u!1 &1836717534
 GameObject:
   m_ObjectHideFlags: 0
