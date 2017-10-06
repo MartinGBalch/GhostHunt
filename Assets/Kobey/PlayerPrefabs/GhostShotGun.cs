@@ -79,12 +79,16 @@ public class GhostShotGun : MonoBehaviour {
                            
                             hitInfo.collider.GetComponent<Ikillable>().Die();
                             //break;
-
+                            Debug.DrawLine(start, (start + (End * distance)),Color.red);
+                        }
+                        else
+                        {
+                            Debug.DrawLine(start, (start + (End * distance)));
                         }
                     }
                 }
             }
-            Debug.DrawLine(start, (start + (End * distance)));
+            
         }
        
     }
@@ -115,6 +119,7 @@ public class GhostShotGun : MonoBehaviour {
         if (reloadTime <= 0 && Trigger == 1 && !isHeld)
         {
             Shoot();
+            
             isHeld = false;
             reloadTime = startReload;
         }
