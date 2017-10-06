@@ -44,7 +44,7 @@ public class SoulCarrier : MonoBehaviour {
             babySoul.GetComponent<SoulCollision>().CollisionDelay = 1.3f;
             carriedSouls = 0;
             UpdateLight();
-            Instantiate(babySoul);
+            //Instantiate(babySoul);
         }
       
         //for(int i = 0; i < carriedSouls; i++)
