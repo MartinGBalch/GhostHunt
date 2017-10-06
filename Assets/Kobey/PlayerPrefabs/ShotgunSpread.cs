@@ -84,10 +84,10 @@ public class ShotgunSpread : MonoBehaviour {
                             if (hitInfo.collider.tag == "Test" || hitInfo.collider.tag == "Pumpkin")
                             {
                                 
-                                if (hitInfo.collider.GetComponent<PlayerDeath>().IsAlive == true)
-                                {
-                                    Kills++;
-                                }
+                                //if (hitInfo.collider.GetComponent<PlayerDeath>().IsAlive == true)
+                                //{
+                                //    Kills++;
+                                //}
                                 Debug.Log("Hit Player");
                                 hitInfo.collider.GetComponent<Ikillable>().Die();
 

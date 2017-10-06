@@ -15,7 +15,7 @@ public class GhostDeath : MonoBehaviour, Ikillable
     AudioSource aud;
     public AudioClip deathSound;
     public float pitch;
-
+    
     void Start()
     {
         aud = GetComponent<AudioSource>();

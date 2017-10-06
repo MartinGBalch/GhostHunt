@@ -76,7 +76,7 @@ public class GhostShotGun : MonoBehaviour {
 
                         if (hitInfo.collider.tag == "Ghost" || hitInfo.collider.tag == "Pumpkin")
                         {
-                            Debug.Log("Hit Ghost");
+                           
                             hitInfo.collider.GetComponent<Ikillable>().Die();
                             //break;
 
