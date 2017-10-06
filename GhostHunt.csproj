@@ -116,6 +116,8 @@
     <Compile Include="Assets\Scenes\Shawn\BreakPumpkin.cs" />
     <Compile Include="Assets\Scenes\Shawn\JMO Assets\MatCap Shaders\Demo\Assets\MC_AutoRotate.cs" />
     <Compile Include="Assets\Scenes\Shawn\JMO Assets\MatCap Shaders\Demo\Assets\MC_SwitchTexture.cs" />
+    <Compile Include="Assets\Scenes\Shawn\Mountain Terrain\Misc\CameraDefault.cs" />
+    <Compile Include="Assets\Scenes\Shawn\RandomRotation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Kobey\Particle Dissolve Shader by Moonflower Carnivore\Shaders\legacy\DissolveSoft_Alpha_Additive.shader" />
