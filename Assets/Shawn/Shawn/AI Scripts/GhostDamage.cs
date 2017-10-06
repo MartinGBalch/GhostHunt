@@ -48,7 +48,7 @@ public class GhostDamage : MonoBehaviour
         {
             if(other.gameObject.GetComponent<SoulCarrier>().carriedSouls > 0)
                 other.gameObject.GetComponent<SoulCarrier>().carriedSouls -= amount;
-            GhostAudio[0].GetComponent<AudioSource>().Play();
+            GhostAudio[1].GetComponent<AudioSource>().Play();
             other.gameObject.GetComponent<SoulCarrier>().UpdateLight();
             GetComponent<Renderer>().enabled = false;
             GetComponent<Collider>().enabled = false;
