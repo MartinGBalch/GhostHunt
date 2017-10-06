@@ -94,6 +94,7 @@ public class ShotgunSpread : MonoBehaviour {
                                 hitInfo.collider.GetComponent<Ikillable>().Die();
                                 
                             }
+                            
                         }
                     }
                 }
@@ -126,6 +127,7 @@ public class ShotgunSpread : MonoBehaviour {
         if (reloadTime <= 0 && Trigger == 1 && !isHeld)
         {
             Shoot();
+            
             isHeld = false;
             reloadTime = startReload;
         }
