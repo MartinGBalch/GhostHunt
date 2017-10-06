@@ -31,7 +31,7 @@ public class PlayerDeath : MonoBehaviour, Ikillable {
     void ReSpawn()
     {
         transform.position = startLocation;
-        deathText.text = "Dead.";
+        deathText.text = "Dead";
         
         Debug.Log("Spawned");
     }
