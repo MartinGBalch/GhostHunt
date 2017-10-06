@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 1ac208b1e3f406745a391f1c1b3e3a0f
+timeCreated: 1507242016
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Misfits
+  fontNames:
+  - Misfits
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

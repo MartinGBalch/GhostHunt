@@ -7,6 +7,9 @@ using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour
 {
     public float time;
+    public float endTimer;
+
+    public Canvas GameOver;
     int Min;
     int Sec;
     Text RoundTimer;
@@ -15,6 +18,7 @@ public class Timer : MonoBehaviour
     void Start ()
     {
         RoundTimer = GetComponent<Text>();
+        GameOver.gameObject.SetActive(false);
         
     }
 	
@@ -29,10 +33,12 @@ public class Timer : MonoBehaviour
         }
         else
         {
-            if(Input.GetKey(KeyCode.Escape))
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            }
+            endTimer -= Time.deltaTime;
+        }
+
+        if (endTimer <= 0)
+        {
+            GameOver.gameObject.SetActive(true);
         }
        
         GameTime();

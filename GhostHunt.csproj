@@ -102,6 +102,7 @@
     <Compile Include="Assets\Kobey\UXinput\ButtonTest.cs" />
     <Compile Include="Assets\Kobey\UXinput\ControllerSelection.cs" />
     <Compile Include="Assets\Kobey\XInputDotNet\Examples\XInputTestCS.cs" />
+    <Compile Include="Assets\Martin\Scripts\GameOverButtons.cs" />
     <Compile Include="Assets\Martin\Scripts\HowToManager.cs" />
     <Compile Include="Assets\Martin\Scripts\Menu.cs" />
     <Compile Include="Assets\Martin\Scripts\Timer.cs" />
