@@ -4,14 +4,23 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 12
+<<<<<<< HEAD
   productGUID: 6f64fb87b1ce93f46ba2f2fa22ccad16
+=======
+  productGUID: fe70f8ae8e36ff44784c962ae7001625
+>>>>>>> 68186c6fadc3d767cee4fee9aaa17b3c883727b7
   AndroidProfiler: 0
   defaultScreenOrientation: 4
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
+<<<<<<< HEAD
   companyName: DefaultCompany
   productName: GhostHunt
+=======
+  companyName: All-Nighter Games
+  productName: Ghost Hunt
+>>>>>>> 68186c6fadc3d767cee4fee9aaa17b3c883727b7
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -37,7 +46,15 @@ PlayerSettings:
     y: 0
     width: 1
     height: 1
+<<<<<<< HEAD
   m_SplashScreenLogos: []
+=======
+  m_SplashScreenLogos:
+  - logo: {fileID: 10404, guid: 0000000000000000e000000000000000, type: 0}
+    duration: 2
+  - logo: {fileID: 21300000, guid: b2e6cc71a5c6ce243ba28deda10db9bd, type: 3}
+    duration: 2
+>>>>>>> 68186c6fadc3d767cee4fee9aaa17b3c883727b7
   m_SplashScreenBackgroundLandscape: {fileID: 0}
   m_SplashScreenBackgroundPortrait: {fileID: 0}
   m_VirtualRealitySplashScreen: {fileID: 0}
@@ -584,7 +601,11 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled: {}
+<<<<<<< HEAD
   facebookSdkVersion: 7.9.4
+=======
+  facebookSdkVersion: 
+>>>>>>> 68186c6fadc3d767cee4fee9aaa17b3c883727b7
   apiCompatibilityLevel: 2
   cloudProjectId: 
   projectName: 
