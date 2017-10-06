@@ -15,8 +15,10 @@ public class PlayerDeath : MonoBehaviour, Ikillable {
     public int Deaths;
     public bool IsAlive = true;
     public Text deathText;
+    AudioSource deathSound;
     void Start ()
     {
+        deathSound = GetComponent<AudioSource>();
         carrier = GetComponent<SoulCarrier>();
         Deaths = 0;
         anim = GetComponent<Animator>();
@@ -40,6 +42,7 @@ public class PlayerDeath : MonoBehaviour, Ikillable {
     {
         if(IsAlive == true)
         {
+            deathSound.Play(11025);
             Deaths++;
             carrier.DropSouls();
             IsAlive = false;
