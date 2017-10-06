@@ -1419,22 +1419,22 @@ Prefab:
     - target: {fileID: 114511001050819994, guid: cf108c98a7ac51e4891ae7c2ce00ae73,
         type: 2}
       propertyPath: time
-      value: 5
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 114602207402334608, guid: cf108c98a7ac51e4891ae7c2ce00ae73,
         type: 2}
       propertyPath: time
-      value: 5
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 114939050116282070, guid: cf108c98a7ac51e4891ae7c2ce00ae73,
         type: 2}
       propertyPath: time
-      value: 5
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 114995034781025256, guid: cf108c98a7ac51e4891ae7c2ce00ae73,
         type: 2}
       propertyPath: time
-      value: 5
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 224477484035229632, guid: cf108c98a7ac51e4891ae7c2ce00ae73,
         type: 2}
@@ -62611,9 +62611,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: af62398fad08e6b49af4cc4a78955964, type: 3}
+  m_audioClip: {fileID: 8300000, guid: aeaafc1937444384a8d393cc1787ef09, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.47
   m_Pitch: 1
   Loop: 1
   Mute: 0
