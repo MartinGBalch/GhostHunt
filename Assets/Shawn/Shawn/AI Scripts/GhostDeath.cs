@@ -12,15 +12,20 @@ public class GhostDeath : MonoBehaviour, Ikillable
     public float deathTimer;
     public bool isAlive = true;
     public bool dieTest = false;
+<<<<<<< HEAD:Assets/Shawn/Shawn/AI Scripts/GhostDeath.cs
     AudioSource aud;
     public AudioClip deathSound;
     public float pitch;
     
     void Start()
-    {
-        aud = GetComponent<AudioSource>();
-    }
+=======
+    public GameObject[] GhostAudio;
 
+    void Awake()
+>>>>>>> Shawn:Assets/Scenes/Shawn/AI Scripts/GhostDeath.cs
+    {
+        GhostAudio = GameObject.FindGameObjectsWithTag("GhostAudio");
+    }
     void Update ()
     {
         if (dieTest)
@@ -39,9 +44,6 @@ public class GhostDeath : MonoBehaviour, Ikillable
     {
         if(isAlive == true)
         {
-            aud.pitch = pitch;
-            aud.clip = deathSound;
-            aud.Play();
             GetComponent<GhostAI>().Dieing = true;
             isAlive = false;
             GetComponent<Renderer>().enabled = false;
@@ -49,6 +51,7 @@ public class GhostDeath : MonoBehaviour, Ikillable
             GetComponentInChildren<ParticleSystem>().gameObject.SetActive(false);
             glow.gameObject.SetActive(false);
             deathPosition = transform.position;
+            GhostAudio[1].GetComponent<AudioSource>().Play();
             Instantiate(death, transform.position, Quaternion.identity);           
         }
     }

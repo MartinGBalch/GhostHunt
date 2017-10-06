@@ -133,11 +133,11 @@
     <Reference Include="XInputDotNetPure">
       <HintPath>Assets\Kobey\XInputDotNet\Plugins\XInputDotNetPure.dll</HintPath>
     </Reference>
-    <Reference Include="JMOAssets">
-      <HintPath>Assets\Scenes\Shawn\JMO Assets\Editor\JMOAssets.dll</HintPath>
-    </Reference>
     <Reference Include="JMOAssets_MatCapWelcome">
-      <HintPath>Assets\Scenes\Shawn\JMO Assets\Editor\JMOAssets_MatCapWelcome.dll</HintPath>
+      <HintPath>Assets\Shawn\Shawn\JMO Assets\Editor\JMOAssets_MatCapWelcome.dll</HintPath>
+    </Reference>
+    <Reference Include="JMOAssets">
+      <HintPath>Assets\Shawn\Shawn\JMO Assets\Editor\JMOAssets.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -175,19 +175,19 @@
     <None Include="Assets\Kobey\XInputDotNet\Docs.txt" />
     <None Include="Assets\Kobey\XInputDotNet\MITLicense.txt" />
     <None Include="Assets\Models\Materials\Velvet\Velvet.shader" />
-    <None Include="Assets\Scenes\Shawn\JMO Assets\!JMO Assets Readme.txt" />
-    <None Include="Assets\Scenes\Shawn\JMO Assets\MatCap Shaders\Shaders\MatCap_Lit.shader" />
-    <None Include="Assets\Scenes\Shawn\JMO Assets\MatCap Shaders\Shaders\MatCap_Plain.shader" />
-    <None Include="Assets\Scenes\Shawn\JMO Assets\MatCap Shaders\Shaders\MatCap_Plain_Additive.shader" />
-    <None Include="Assets\Scenes\Shawn\JMO Assets\MatCap Shaders\Shaders\MatCap_Plain_AdditiveZ.shader" />
-    <None Include="Assets\Scenes\Shawn\JMO Assets\MatCap Shaders\Shaders\MatCap_Plain_Bumped.shader" />
-    <None Include="Assets\Scenes\Shawn\JMO Assets\MatCap Shaders\Shaders\MatCap_TextureAdd.shader" />
-    <None Include="Assets\Scenes\Shawn\JMO Assets\MatCap Shaders\Shaders\MatCap_TextureAdd_Bumped.shader" />
-    <None Include="Assets\Scenes\Shawn\JMO Assets\MatCap Shaders\Shaders\MatCap_TextureMult.shader" />
-    <None Include="Assets\Scenes\Shawn\JMO Assets\MatCap Shaders\Shaders\MatCap_TextureMult_Bumped.shader" />
-    <None Include="Assets\Scenes\Shawn\JMO Assets\MatCap Shaders\Textures\BenSimonds\_Textures Readme.txt" />
-    <None Include="Assets\Scenes\Shawn\JMO Assets\MatCap Shaders\Textures\MaCrea\MaCrea.txt" />
-    <None Include="Assets\Scenes\Shawn\JMO Assets\MatCap Shaders\_MatCap Shaders Readme.txt" />
+    <None Include="Assets\Shawn\Shawn\JMO Assets\!JMO Assets Readme.txt" />
+    <None Include="Assets\Shawn\Shawn\JMO Assets\MatCap Shaders\Shaders\MatCap_Lit.shader" />
+    <None Include="Assets\Shawn\Shawn\JMO Assets\MatCap Shaders\Shaders\MatCap_Plain.shader" />
+    <None Include="Assets\Shawn\Shawn\JMO Assets\MatCap Shaders\Shaders\MatCap_Plain_Additive.shader" />
+    <None Include="Assets\Shawn\Shawn\JMO Assets\MatCap Shaders\Shaders\MatCap_Plain_AdditiveZ.shader" />
+    <None Include="Assets\Shawn\Shawn\JMO Assets\MatCap Shaders\Shaders\MatCap_Plain_Bumped.shader" />
+    <None Include="Assets\Shawn\Shawn\JMO Assets\MatCap Shaders\Shaders\MatCap_TextureAdd.shader" />
+    <None Include="Assets\Shawn\Shawn\JMO Assets\MatCap Shaders\Shaders\MatCap_TextureAdd_Bumped.shader" />
+    <None Include="Assets\Shawn\Shawn\JMO Assets\MatCap Shaders\Shaders\MatCap_TextureMult.shader" />
+    <None Include="Assets\Shawn\Shawn\JMO Assets\MatCap Shaders\Shaders\MatCap_TextureMult_Bumped.shader" />
+    <None Include="Assets\Shawn\Shawn\JMO Assets\MatCap Shaders\Textures\BenSimonds\_Textures Readme.txt" />
+    <None Include="Assets\Shawn\Shawn\JMO Assets\MatCap Shaders\Textures\MaCrea\MaCrea.txt" />
+    <None Include="Assets\Shawn\Shawn\JMO Assets\MatCap Shaders\_MatCap Shaders Readme.txt" />
     <None Include="Assets\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
