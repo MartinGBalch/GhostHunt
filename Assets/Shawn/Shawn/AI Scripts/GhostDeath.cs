@@ -12,11 +12,13 @@ public class GhostDeath : MonoBehaviour, Ikillable
     public float deathTimer;
     public bool isAlive = true;
     public bool dieTest = false;
-    public GameObject[] GhostAudio;
-
+    public GameObject GhostAudio;
+    AudioSource[] sounds;
     void Awake()
     {
-        GhostAudio = GameObject.FindGameObjectsWithTag("GhostAudio");
+
+        GhostAudio = GameObject.FindGameObjectWithTag("GhostAudio");
+        sounds = GhostAudio.GetComponents<AudioSource>();
     }
     void Update ()
     {
@@ -43,7 +45,7 @@ public class GhostDeath : MonoBehaviour, Ikillable
             GetComponentInChildren<ParticleSystem>().gameObject.SetActive(false);
             glow.gameObject.SetActive(false);
             deathPosition = transform.position;
-            GhostAudio[0].GetComponent<AudioSource>().Play();
+            sounds[1].Play();
             Instantiate(death, transform.position, Quaternion.identity);           
         }
     }
