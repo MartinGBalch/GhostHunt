@@ -6,13 +6,22 @@ public class BreakPumpkin : MonoBehaviour, Ikillable
 {
     Animator anim;
     Collider coll;
+    AudioSource aud;
     bool isAlive = true;
-	
+	public bool testBreak = false;
+
 	void Start ()
     {
         anim = GetComponent<Animator>();
         coll = GetComponent<Collider>();
+        aud = GetComponent<AudioSource>();
 	}
+
+    void Update()
+    {
+        if (testBreak == true)
+            Die();
+    }
 
     public void Die()
     {
@@ -21,6 +30,7 @@ public class BreakPumpkin : MonoBehaviour, Ikillable
             isAlive = false;
             GetComponent<Collider>().enabled = false;
             anim.SetBool("Break", true);
+            aud.Play();
         }
     }
 

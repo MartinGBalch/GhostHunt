@@ -12,8 +12,16 @@ public class GhostDeath : MonoBehaviour, Ikillable
     public float deathTimer;
     public bool isAlive = true;
     public bool dieTest = false;
+    AudioSource aud;
+    public AudioClip deathSound;
+    public float pitch;
 
-	void Update ()
+    void Start()
+    {
+        aud = GetComponent<AudioSource>();
+    }
+
+    void Update ()
     {
         if (dieTest)
             Die();
@@ -31,6 +39,9 @@ public class GhostDeath : MonoBehaviour, Ikillable
     {
         if(isAlive == true)
         {
+            aud.pitch = pitch;
+            aud.clip = deathSound;
+            aud.Play();
             GetComponent<GhostAI>().Dieing = true;
             isAlive = false;
             GetComponent<Renderer>().enabled = false;

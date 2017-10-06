@@ -12,6 +12,16 @@ public class GhostDamage : MonoBehaviour
     public float flashRate;
     public float flashTimer;
     public GameObject GhostSpawner;
+    AudioSource aud;
+    public AudioClip damageSound;
+    public float pitch;
+    public bool testSound = false;
+
+
+    void Start()
+    {
+        aud = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -38,6 +48,9 @@ public class GhostDamage : MonoBehaviour
         {
             if(other.gameObject.GetComponent<SoulCarrier>().carriedSouls > 0)
                 other.gameObject.GetComponent<SoulCarrier>().carriedSouls -= amount;
+            aud.clip = damageSound;
+            aud.pitch = pitch;
+            aud.Play();
             other.gameObject.GetComponent<SoulCarrier>().UpdateLight();
             GetComponent<Renderer>().enabled = false;
             GetComponent<Collider>().enabled = false;
