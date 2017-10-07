@@ -9217,7 +9217,7 @@ GameObject:
   - component: {fileID: 566570715}
   m_Layer: 0
   m_Name: GhostSpawner
-  m_TagString: Untagged
+  m_TagString: GhostSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9831,11 +9831,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4170669298727688, guid: fb72074c30e667f49a6decd342c950fb, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -8.873951
+      value: -9.64
       objectReference: {fileID: 0}
     - target: {fileID: 4170669298727688, guid: fb72074c30e667f49a6decd342c950fb, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 51.022457
+      value: 52.1
       objectReference: {fileID: 0}
     - target: {fileID: 4170669298727688, guid: fb72074c30e667f49a6decd342c950fb, type: 2}
       propertyPath: m_LocalRotation.x
@@ -11451,11 +11451,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4724782636303520, guid: 09778ef7cc1cd3d44ba55775e513074d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -9.5
+      value: -9.25
       objectReference: {fileID: 0}
     - target: {fileID: 4724782636303520, guid: 09778ef7cc1cd3d44ba55775e513074d, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -16.4
+      value: -15.84
       objectReference: {fileID: 0}
     - target: {fileID: 4724782636303520, guid: 09778ef7cc1cd3d44ba55775e513074d, type: 2}
       propertyPath: m_LocalRotation.x
@@ -28876,7 +28876,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: aeaafc1937444384a8d393cc1787ef09, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e52abe80a34e6f64097346528347f446, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.47
   m_Pitch: 1

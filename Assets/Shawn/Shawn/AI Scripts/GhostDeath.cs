@@ -16,7 +16,7 @@ public class GhostDeath : MonoBehaviour, Ikillable
     AudioSource[] sounds;
     void Awake()
     {
-
+        GhostSpawner = GameObject.FindGameObjectWithTag("GhostSpawner");
         GhostAudio = GameObject.FindGameObjectWithTag("GhostAudio");
         sounds = GhostAudio.GetComponents<AudioSource>();
     }

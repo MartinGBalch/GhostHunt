@@ -115,6 +115,7 @@
     <Compile Include="Assets\Shawn\Shawn\AI Scripts\GhostView.cs" />
     <Compile Include="Assets\Shawn\Shawn\AI Scripts\LightFlicker.cs" />
     <Compile Include="Assets\Shawn\Shawn\BreakPumpkin.cs" />
+    <Compile Include="Assets\Shawn\Shawn\Ghost Prefab\ParticleDeath.cs" />
     <Compile Include="Assets\Shawn\Shawn\JMO Assets\MatCap Shaders\Demo\Assets\MC_AutoRotate.cs" />
     <Compile Include="Assets\Shawn\Shawn\JMO Assets\MatCap Shaders\Demo\Assets\MC_SwitchTexture.cs" />
     <Compile Include="Assets\Shawn\Shawn\Mountain Terrain\Misc\CameraDefault.cs" />

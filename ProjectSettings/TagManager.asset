@@ -9,6 +9,7 @@ TagManager:
   - GhostWall
   - Pumpkin
   - GhostAudio
+  - GhostSpawner
   layers:
   - Default
   - TransparentFX
