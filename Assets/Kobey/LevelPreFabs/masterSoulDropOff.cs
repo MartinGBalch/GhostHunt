@@ -51,7 +51,7 @@ public class masterSoulDropOff : MonoBehaviour {
             winLight.color = p4;
         }
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Test")
         {
