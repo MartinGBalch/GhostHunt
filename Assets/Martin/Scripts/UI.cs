@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using XInputDotNetPure;
 
 public class UI : MonoBehaviour
 {
@@ -12,18 +14,21 @@ public class UI : MonoBehaviour
     public Color maxSoul;
 
     public RawImage Counter;
-    
 
+   
 	// Use this for initialization
 	void Start ()
     {
+        
         carryCount = GetComponent<Text>();
+       
         //Counter = GetComponent<RawImage>();
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
+       
 		setSoulText ();
     }
 

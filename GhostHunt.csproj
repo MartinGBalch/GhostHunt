@@ -106,6 +106,7 @@
     <Compile Include="Assets\Martin\Scripts\GameOverButtons.cs" />
     <Compile Include="Assets\Martin\Scripts\HowToManager.cs" />
     <Compile Include="Assets\Martin\Scripts\Menu.cs" />
+    <Compile Include="Assets\Martin\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Martin\Scripts\Timer.cs" />
     <Compile Include="Assets\Martin\Scripts\UI.cs" />
     <Compile Include="Assets\Martin\Scripts\WinState.cs" />
