@@ -52,7 +52,7 @@ public class ShotgunSpread : MonoBehaviour {
         startReload = reloadTime;
         reloadTime = 0;
 	}
-	
+
     
 
     void Shoot()
@@ -71,6 +71,8 @@ public class ShotgunSpread : MonoBehaviour {
                 float z = Random.Range(-0.4f, 0.6f);
 
                 Vector3 End = new Vector3(transform.forward.x + x, transform.forward.y, transform.forward.z + z);
+           
+
                 RaycastHit sphereHit;
                 RaycastHit hitInfo;
                 Debug.DrawLine(start, (start + (End * distance)));
