@@ -49,7 +49,7 @@ public class GhostShotGun : MonoBehaviour {
         reloadTime = 0;
         
     }
-
+   
     void Shoot()
     {
         Pellet.Play();
@@ -63,7 +63,7 @@ public class GhostShotGun : MonoBehaviour {
             Vector3 End = new Vector3(transform.forward.x + x, transform.forward.y, transform.forward.z + z);
            
             Vector3 start = transform.position;
-           
+            
             RaycastHit sphereHit;
             RaycastHit hitInfo;
             if (Physics.SphereCast(start, 0.5f, transform.forward, out sphereHit))
