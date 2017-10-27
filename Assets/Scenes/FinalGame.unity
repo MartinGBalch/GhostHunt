@@ -23957,11 +23957,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 2145715132}
     m_Modifications:
-    - target: {fileID: 198232929379267392, guid: 396aaa552529c2f459db379eb5e0e3b8,
-        type: 2}
-      propertyPath: EmissionModule.m_Bursts.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4479232598906544, guid: 396aaa552529c2f459db379eb5e0e3b8, type: 2}
       propertyPath: m_LocalPosition.x
       value: -60.6
@@ -23999,31 +23994,6 @@ Prefab:
       propertyPath: deathText
       value: 
       objectReference: {fileID: 484533135}
-    - target: {fileID: 198232929379267392, guid: 396aaa552529c2f459db379eb5e0e3b8,
-        type: 2}
-      propertyPath: EmissionModule.m_BurstCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 198232929379267392, guid: 396aaa552529c2f459db379eb5e0e3b8,
-        type: 2}
-      propertyPath: EmissionModule.m_Bursts.Array.data[0].minCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 198232929379267392, guid: 396aaa552529c2f459db379eb5e0e3b8,
-        type: 2}
-      propertyPath: EmissionModule.m_Bursts.Array.data[0].maxCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 198232929379267392, guid: 396aaa552529c2f459db379eb5e0e3b8,
-        type: 2}
-      propertyPath: EmissionModule.m_Bursts.Array.data[0].cycleCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 198232929379267392, guid: 396aaa552529c2f459db379eb5e0e3b8,
-        type: 2}
-      propertyPath: EmissionModule.m_Bursts.Array.data[0].repeatInterval
-      value: 0.01
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 396aaa552529c2f459db379eb5e0e3b8, type: 2}
   m_IsPrefabParent: 0
