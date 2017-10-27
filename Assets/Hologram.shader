@@ -69,6 +69,7 @@ Shader "Custom/Hologram"
 				output.nor[0] = normalize(UnityObjectToClipPos(input.normal));
 				output.pos = UnityObjectToClipPos(input.vertex);
 				output.uv = input.uv;
+				output.col = float4(1, 1, 1, 1);
 				return output;
 			}
 
@@ -211,6 +212,7 @@ Shader "Custom/Hologram"
 				//output.pos = UnityObjectToClipPos(input.pos);
 				output.nor[0] = normalize(UnityObjectToClipPos(input.normal));
 				output.pos = UnityObjectToClipPos(input.vertex);
+				output.col = float4(1, 1, 1, 1);
 				output.uv = input.uv;
 				return output;
 			}
