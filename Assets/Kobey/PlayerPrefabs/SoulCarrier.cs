@@ -11,6 +11,7 @@ public class SoulCarrier : MonoBehaviour {
     private float lightIntensity;
     private float lightRange;
     public new Light light;
+    public ParticleSystem dropOff;
 
     float maxRange = 8;
     float maxIntensity = 6;

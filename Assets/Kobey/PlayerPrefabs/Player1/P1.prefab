@@ -2777,6 +2777,7 @@ MonoBehaviour:
   maxSoulCount: 15
   Soul: {fileID: 1219972017194376, guid: e912df23d4d40f444ac56a9f3e5c5f18, type: 2}
   light: {fileID: 108020887250907768}
+  dropOff: {fileID: 198552204277920002}
 --- !u!114 &114242425085215684
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -58,47 +58,33 @@ public class masterSoulDropOff : MonoBehaviour {
             var soulCarrier = other.GetComponent<SoulCarrier>();
             if (soulCarrier != null)
             {
-                ParticleSystem ps = other.GetComponent<ParticleSystem>();
+                ParticleSystem ps = other.GetComponent<SoulCarrier>().dropOff;
                 var emission = ps.emission;
-                var rate = emission.rateOverTime;
+
+                if (soulCarrier.carriedSouls > 0)
+                {
+                    ps.gameObject.SetActive(true);
+                    emission.rateOverTime = soulCarrier.carriedSouls;
+                }
+
                 switch (soulCarrier.playerNum)
                 {
                     case 1:
-                        if (soulCarrier.carriedSouls > 0)
-                        {
-                            rate = soulCarrier.carriedSouls;
-                            other.GetComponent<ParticleSystem>().gameObject.SetActive(true);
-                        }
                         P1storedSouls += soulCarrier.carriedSouls;
                         soulCarrier.carriedSouls = 0;
                         soulCarrier.UpdateLight();
                         break;
                     case 2:
-                        if (soulCarrier.carriedSouls > 0)
-                        {
-                            rate = soulCarrier.carriedSouls;
-                            other.GetComponent<ParticleSystem>().gameObject.SetActive(true);
-                        }
                         P2storedSouls += soulCarrier.carriedSouls;
                         soulCarrier.carriedSouls = 0;
                         soulCarrier.UpdateLight();
                         break;
                     case 3:
-                        if (soulCarrier.carriedSouls > 0)
-                        {
-                            rate = soulCarrier.carriedSouls;
-                            other.GetComponent<ParticleSystem>().gameObject.SetActive(true);
-                        }
                         P3storedSouls += soulCarrier.carriedSouls;
                         soulCarrier.carriedSouls = 0;
                         soulCarrier.UpdateLight();
                         break;
                     case 4:
-                        if (soulCarrier.carriedSouls > 0)
-                        {
-                            rate = soulCarrier.carriedSouls;
-                            other.GetComponent<ParticleSystem>().gameObject.SetActive(true);
-                        }
                         P4storedSouls += soulCarrier.carriedSouls;
                         soulCarrier.carriedSouls = 0;
                         soulCarrier.UpdateLight();
