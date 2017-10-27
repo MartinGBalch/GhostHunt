@@ -453,8 +453,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4920883643114142}
   - component: {fileID: 198232929379267392}
+  - component: {fileID: 114829921234706918}
   - component: {fileID: 199150575670288676}
-  - component: {fileID: 114358381120949624}
   m_Layer: 0
   m_Name: SoulTurnInEffect
   m_TagString: Untagged
@@ -2827,17 +2827,6 @@ MonoBehaviour:
   reloadTime: 1
   playerNumber: 4
   Pellet: {fileID: 198031506516083976}
---- !u!114 &114358381120949624
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1411310535049136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb4178eab5175d24093b287a4995c2d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114515911758946336
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2869,6 +2858,17 @@ MonoBehaviour:
   isOn: 0
   PlayerNum: 4
   press: 0
+--- !u!114 &114829921234706918
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1411310535049136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05b57c625fccfe149a4e0dff39932ba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &135966228259984142
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -479,8 +479,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4433520270738674}
   - component: {fileID: 198605210071383682}
+  - component: {fileID: 114566256116819778}
   - component: {fileID: 199200180520123736}
-  - component: {fileID: 114132512049642390}
   m_Layer: 0
   m_Name: SoulTurnInEffect
   m_TagString: Untagged
@@ -2761,17 +2761,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114132512049642390
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1422965838682644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb4178eab5175d24093b287a4995c2d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114210609419538642
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2821,6 +2810,17 @@ MonoBehaviour:
   Deaths: 0
   IsAlive: 1
   deathText: {fileID: 0}
+--- !u!114 &114566256116819778
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1422965838682644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05b57c625fccfe149a4e0dff39932ba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114580841787163154
 MonoBehaviour:
   m_ObjectHideFlags: 1
