@@ -54,15 +54,20 @@ public class GhostShotGun : MonoBehaviour {
     {
         Pellet.Play();
         sounds[2].Play();
-       
+
+
+        Vector3 start = transform.position;
+        Vector3 End = transform.forward;
+        End = Quaternion.AngleAxis(-30, Vector3.up) * End;
+
         for (int i = 0; i < lineCount; i++)
         {
-            float x = Random.Range(-0.4f, 0.6f);
-            float z = Random.Range(-0.4f, 0.6f);
+            //float x = Random.Range(-0.4f, 0.6f);
+            //float z = Random.Range(-0.4f, 0.6f);
 
-            Vector3 End = new Vector3(transform.forward.x + x, transform.forward.y, transform.forward.z + z);
+            //Vector3 End = new Vector3(transform.forward.x + x, transform.forward.y, transform.forward.z + z);
            
-            Vector3 start = transform.position;
+            //Vector3 start = transform.position;
             
             RaycastHit sphereHit;
             RaycastHit hitInfo;
@@ -88,7 +93,7 @@ public class GhostShotGun : MonoBehaviour {
                     }
                 }
             }
-            
+            End = Quaternion.AngleAxis(5, Vector3.up) * End;
         }
        
     }

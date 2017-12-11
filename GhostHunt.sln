@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
+# Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GhostHunt", "GhostHunt.csproj", "{B9DA1C8A-C547-151D-7D54-78ACFAA346C9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GhostHunt.Editor", "GhostHunt.Editor.csproj", "{5EA7755E-9BC2-02F0-36DF-0731F6973AC4}"

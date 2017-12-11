@@ -63,15 +63,16 @@ public class ShotgunSpread : MonoBehaviour {
             Pellet.Play();
            
             Vector3 start = transform.position;
-
+            Vector3 End = transform.forward;
+            End = Quaternion.AngleAxis(-30, Vector3.up) * End;
             for (int i = 0; i < lineCount; i++)
             {
-               
-                float x = Random.Range(-0.4f, 0.6f);
-                float z = Random.Range(-0.4f, 0.6f);
 
-                Vector3 End = new Vector3(transform.forward.x + x, transform.forward.y, transform.forward.z + z);
-           
+                //float x = Random.Range(-0.4f, 0.6f);
+                //float z = Random.Range(-0.4f, 0.6f);
+                
+                //Vector3 End = new Vector3(transform.forward.x + x, transform.forward.y, transform.forward.z + z);
+
 
                 RaycastHit sphereHit;
                 RaycastHit hitInfo;
@@ -100,6 +101,7 @@ public class ShotgunSpread : MonoBehaviour {
                         }
                     }
                 }
+                End = Quaternion.AngleAxis(5, Vector3.up) * End;
             }
            
             anim.SetTrigger("Reloading");
